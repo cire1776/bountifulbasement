@@ -2,17 +2,12 @@ import './App.css';
 import React, {useState, useEffect} from 'react';
 import OrderSlip from './components/OrderSlip';
 
-
-console.log(process.env.REACT_APP_AIRTABLE_API_KEY);
-
 function App() {
   const [items, setItems] = useState({});
   const [categories, setCategories] = useState([]);
 
   async function fetchSlipItems() {
     const Airtable = require('airtable-node');
-
-    console.log(process.env);
 
     const airtable = await new Airtable({ apiKey: process.env.REACT_APP_AIRTABLE_API_KEY })
       .base('appPJGWfywLNUoPkg')
