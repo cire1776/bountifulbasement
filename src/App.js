@@ -3,6 +3,8 @@ import React, {useState, useEffect} from 'react';
 import OrderSlip from './components/OrderSlip';
 
 
+console.log(process.env.REACT_APP_AIRTABLE_API_KEY);
+
 function App() {
   const [items, setItems] = useState({});
   const [categories, setCategories] = useState([]);
