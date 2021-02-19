@@ -71,7 +71,29 @@ li + li {
     list-style: none;
     display: grid;
     grid-template-columns: 1.5rem 15rem 5rem 2rem 2rem;
+    /* outline: 1px solid red; */
 }
+
+.list-of-items input[type="checkbox"],
+.list-of-items li img
+ {
+    position: relative;
+    top: 5px;
+}
+
+.list-of-items select {
+    /* background-color: inherit; */
+    position: relative;
+    top: 2px;
+
+}
+.list-of-items li:nth-child(even) {
+    background-color: lightblue;
+}
+
+
+
+
 .list-of-items h2 {
     display: inline;
     font-size: 20px;
