@@ -8,9 +8,13 @@ import OrderSlip from './OrderSlip';
 import ModalDialog from './ModalDialog';
 import EditableItemName from './EditableItemName';
 
+import netlifyIdentity from 'netlify-identity-widget';
 
 
 function OrderSlipEditor() {
+    const user = netlifyIdentity.currentUser();
+    console.log({ user });
+
     const [orderSlipItems, setOrderSlipItems] = useState({});
     const [items, setItems] = useState([]);
     const [categories, setCategories] = useState([]);
@@ -30,6 +34,13 @@ function OrderSlipEditor() {
 
     useEffect(() => {
     }, [items])
+
+    if (!user) {
+        return  <section>
+                    <h1>You must be logged in to access this page</h1>
+                    <button onClick={netlifyIdentity.open()}>Login</button>
+                </section>
+    }
 
     function toggleStatus(id) {
         const newStatus = items[id].status === 'use' ? 'skip' : 'use';
