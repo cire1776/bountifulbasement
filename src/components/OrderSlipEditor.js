@@ -63,7 +63,6 @@ function OrderSlipEditor() {
     }
 
     function addItem(newName) {
-        console.log(newName);
         if (!newName) {
             return;
         }
@@ -111,7 +110,6 @@ function OrderSlipEditor() {
             {
                 Object.keys(items).map((id)=> {
                     const item = items[id];
-                    console.log(id);
                     if (id===editedItem) {
                         return <li key={id} className={item.status === "use" ? 'used': 'skip'}>
                                     <input type='checkbox' checked={item.status === 'use'} onChange={()=>toggleStatus(id)}/>

@@ -88,7 +88,6 @@ export async function updateFields(id, fields, refresher) {
     .base('appPJGWfywLNUoPkg')
     .table('order-slip-data')
   await airtable.update(id, fields);
-  console.log("updating", id);
 
   if (refresher) {
     refresher();
@@ -101,8 +100,7 @@ export async function deleteItem(id,refresher) {
     .base('appPJGWfywLNUoPkg')
     .table('order-slip-data')
   await airtable.delete(id);
-  console.log("deleting: ", id);
-
+  
   if (refresher) {
     refresher();
   }
