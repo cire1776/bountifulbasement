@@ -4,6 +4,7 @@ import pencil from '../assets/pencil.svg';
 import trashcan from '../assets/trash.svg'
 import plus from '../assets/plus.svg';
 import OrderSlip from './OrderSlip';
+import EditableItemName from './EditableItemName';
 
 
 
@@ -26,12 +27,6 @@ function OrderSlipEditor() {
 
     useEffect(() => {
     }, [items])
-
-    useEffect(()=>{
-        if (editedItem !== null) {
-            editFieldRef.current.focus();
-        }
-    })
 
     function toggleStatus(id) {
         const newStatus = items[id].status === 'use' ? 'skip' : 'use';
@@ -68,6 +63,11 @@ function OrderSlipEditor() {
     }
 
     function addItem(newName) {
+        console.log(newName);
+        if (!newName) {
+            return;
+        }
+
         newName = newName.trim();
 
         if (newName === "") {
@@ -83,13 +83,14 @@ function OrderSlipEditor() {
 
     function beginEditingItem(id) {
         setEditedItem(id);
+
     }
 
-    function endEditingItem(id) {
+    function endEditingItem(finalName) {
         if (editedItem === 0) {
-            addItem(editFieldRef.current.value)
+            addItem(finalName);
         } else  {
-            changeName(id, editFieldRef.current.value);
+            changeName(editedItem, finalName);
         }
 
         setEditedItem(null)
@@ -114,7 +115,7 @@ function OrderSlipEditor() {
                     if (id===editedItem) {
                         return <li key={id} className={item.status === "use" ? 'used': 'skip'}>
                                     <input type='checkbox' checked={item.status === 'use'} onChange={()=>toggleStatus(id)}/>
-                                    <input type='text' defaultValue={item.name} ref={editFieldRef} onChange={(event)=>{changeName(id, event.target.value)}} onBlur={endEditingItem}></input>
+                                    <EditableItemName id={id} name={item.name} changeName={changeName} endEditingItem={endEditingItem}/>
                                </li>
                     } else {
                         return <li key={id} className={item.status === "use" ? 'used': 'skip'}>
@@ -136,7 +137,7 @@ function OrderSlipEditor() {
             }
             {
                 (editedItem === 0) ? <li>
-                    <div></div><input type='text' ref={editFieldRef} onBlur={endEditingItem}></input>
+                    <div></div><EditableItemName id={0} endEditingItem={endEditingItem}/>
                 </li>
                 : <button type='button' onClick={(event)=>beginEditingItem(0)}><img src={plus} alt="add"/> </button>
             }
