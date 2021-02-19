@@ -11,8 +11,8 @@ function ModalDialog({activate, children, confirmTitle, confirmAction, dismiss})
     }
 
     return (
-        <div className="backdrop">
-            <section className='modal-dialog'>
+        <div className="backdrop" onClick={()=>dismiss()}>
+            <section className='modal-dialog' onClick={(event)=>{event.stopPropagation()}}>
                 {children}
                 <footer>
                     <button onClick={()=>dismiss()} >Cancel</button>

@@ -150,4 +150,9 @@ main {
     min-height: 300px;
     margin: 0 auto;
     padding: 30px;
+    text-align: center;
+}
+
+.modal-dialog footer {
+    text-align: center;
 }
