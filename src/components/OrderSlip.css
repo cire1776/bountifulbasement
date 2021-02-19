@@ -32,25 +32,25 @@ h1 {
 
 .item-list ul {
     display: flex;
-   flex-basis: 25%;
-   flex-wrap: wrap;
+    flex-basis: 25%;
+    flex-wrap: wrap;
 }
 
 .item-list li {
     list-style: none;
     white-space: nowrap;
     margin-left: 0.5em;
- }
+}
 
 li + li {
-     /* outline: 1px solid red; */
- }
+    /* outline: 1px solid red; */
+}
 
- footer {
-     float: right;
-     padding-right: 2rem;
-     padding-top: 2rem;
- }
+footer {
+    float: right;
+    padding-right: 2rem;
+    padding-top: 2rem;
+}
 
 .editor {
     display: grid;
@@ -81,7 +81,7 @@ li + li {
 
 .list-of-items input[type="checkbox"],
 .list-of-items li img
- {
+{
     position: relative;
     top: 5px;
 }
