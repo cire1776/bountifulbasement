@@ -51,3 +51,50 @@ li + li {
      padding-right: 2rem;
      padding-top: 2rem;
  }
+
+.editor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.editor .order-slip{
+    box-shadow: 10px 10px 5px 5px lightgray;
+}
+
+.list-of-items {
+    width: 60%;
+    text-align: center;
+}
+
+.list-of-items li {
+    text-align: left;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1.5rem 15rem 5rem 2rem 2rem;
+}
+.list-of-items h2 {
+    display: inline;
+    font-size: 20px;
+    font-weight: 400;
+    width: 80%;
+    outline: 1px color blue;
+}
+
+.list-of-items input {
+    display: inline;
+}
+
+.list-of-items select {
+    margin-right: 2em;
+    width: 10ch;
+}
+
+.list-of-items button {
+    width: 2rem;
+    height: 2rem;
+}
+
+.list-of-items input[type='text'] {
+    font-size: 20px;
+    width: 100%;
+}

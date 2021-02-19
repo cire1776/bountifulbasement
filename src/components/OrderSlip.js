@@ -12,7 +12,7 @@ function OrderSlip({items, categories, date}) {
        return <h1>Loading...</h1>
     }
 
-    return <article>
+    return <article className='order-slip'>
         {header}
 
         {
