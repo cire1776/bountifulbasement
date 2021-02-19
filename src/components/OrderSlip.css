@@ -59,11 +59,16 @@ li + li {
 
 .editor .order-slip{
     box-shadow: 10px 10px 5px 5px lightgray;
+    position: fixed;
+    margin: 3em;
 }
 
 .list-of-items {
+    position: relative;
+    left: 500px;
     width: 60%;
     text-align: center;
+    margin-top: 3em;
 }
 
 .list-of-items li {
@@ -91,9 +96,6 @@ li + li {
     background-color: lightblue;
 }
 
-
-
-
 .list-of-items h2 {
     display: inline;
     font-size: 20px;
@@ -119,4 +121,11 @@ li + li {
 .list-of-items input[type='text'] {
     font-size: 20px;
     width: 100%;
+}
+
+.list-of-items header {
+    display: grid;
+    grid-template-columns: 1.5rem 15rem 5rem 2rem 2rem;
+    background-color: rgb(15, 15, 189);
+    color: white;
 }

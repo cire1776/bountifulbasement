@@ -46,8 +46,7 @@ function OrderSlipEditor() {
     }
 
     function checkDeleteItem(id) {
-        deleteItem(id, ()=>setCount((count)=> count + 1)
-);
+        deleteItem(id, ()=>setCount((count)=> count + 1));
     }
 
 
@@ -102,8 +101,12 @@ function OrderSlipEditor() {
     return (
         <div className='editor'>
             <OrderSlip items={orderSlipItems} categories={categories}/>
-            
             <ul className='list-of-items'>
+                <header>
+                    <span>S</span>
+                    <span>Name</span>
+                    <span>Category</span>
+                </header>
             {
                 Object.keys(items).map((id)=> {
                     const item = items[id];
