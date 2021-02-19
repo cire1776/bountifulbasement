@@ -3,7 +3,9 @@ import {fetchEditableItems, fetchSlipItems,fetchCategories, createItem, updateFi
 import pencil from '../assets/pencil.svg';
 import trashcan from '../assets/trash.svg'
 import plus from '../assets/plus.svg';
+
 import OrderSlip from './OrderSlip';
+import ModalDialog from './ModalDialog';
 import EditableItemName from './EditableItemName';
 
 
@@ -14,6 +16,7 @@ function OrderSlipEditor() {
     const [categories, setCategories] = useState([]);
     const [editedItem, setEditedItem] = useState(null)
     const [count, setCount] = useState(0);
+    const [deletingId, setDeletingId] = useState(null);
     const editFieldRef = React.useRef()
     
     useEffect(() => {
@@ -41,7 +44,7 @@ function OrderSlipEditor() {
     }
 
     function checkDeleteItem(id) {
-        deleteItem(id, ()=>setCount((count)=> count + 1));
+        setDeletingId(id);
     }
 
 
@@ -98,7 +101,7 @@ function OrderSlipEditor() {
     if(items.length === 0 || categories.length === 0) {
         return <h1>Loading...</h1>
     }
-    return (
+    return (<main>
         <div className='editor'>
             <OrderSlip items={orderSlipItems} categories={categories}/>
             <ul className='list-of-items'>
@@ -144,7 +147,11 @@ function OrderSlipEditor() {
             </ul>
 
         </div>
-    )
+        <ModalDialog activate={!!deletingId} confirmTitle="Delete" confirmAction={()=>deleteItem(deletingId, ()=>setCount((count)=> count + 1))} dismiss={()=>setDeletingId(null)}>
+            <h1>Are you sure you want to delete '{deletingId && items[deletingId].name}'?
+            </h1>
+        </ModalDialog>
+    </main>)
 }
 
 export default OrderSlipEditor
