@@ -4,7 +4,6 @@ import "./DaySchedule.css";
 require('dotenv').config();
 
 function DaySchedule({date,events,status}) {
-    
     if(!date) {
         return <></>;
     }

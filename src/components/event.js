@@ -12,12 +12,12 @@ const airtable = new Airtable({apiKey})
 export const isScheduled = (date,events) => {
     const day = date.getDate();
     if (!events || !events[day]) return false;
-    const cleanEvents = events[day].filter((event)=> !event.startsWith(CLOSURE));
+    const cleanEvents = events[day].filter((event)=> !event.description.startsWith(CLOSURE));
     return cleanEvents.length > 0;
 }
 
-export const isClosureEvent = (description) => {
-    return description.startsWith(CLOSURE)
+export const isClosureEvent = (event) => {
+  return event.description.startsWith(CLOSURE)
 };
 
 export  const processEventRecords = (records) => {
@@ -28,7 +28,7 @@ export  const processEventRecords = (records) => {
       if (!accum[day]) {
         accum[day] = [];
       }
-      accum[day].push(event.fields.description)
+      accum[day].push({id: event.id,description: event.fields.description})
       return accum
     },{})
   }
@@ -72,6 +72,7 @@ export const determineStatus = (date,monthEvents) => {
     if(monthEvents && monthEvents[day] && monthEvents[day].some(isClosureEvent)) {
       newStatus = 'closed';
     }
+
     return(newStatus);
   }
   

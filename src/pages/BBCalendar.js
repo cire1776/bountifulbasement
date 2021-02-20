@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Calendar from 'react-calendar';
 import DaySchedule from '../components/DaySchedule'
 import MonthSchedule from '../components/MonthSchedule'
@@ -73,12 +73,20 @@ function BBCalendar({displayer}) {
         break;
     }
   }
+
+  function processEvents(events) {
+    return events.map((event)=>{
+      return event.description
+    })
+  }
+
   const displaySchedule = (view, date, events, status) => {
+    const simpleEvents = processEvents(events);
     switch (view) {
       case 'month':
-        return <DaySchedule date={date} events={events} status={status}/>
+        return <DaySchedule date={date} events={simpleEvents} status={status}/>
       case 'year':
-        return <MonthSchedule date={date} events={events} status={status}/>
+        return <MonthSchedule date={date} events={simpleEvents} status={status}/>
       default:
         break;
     }
@@ -93,12 +101,12 @@ function BBCalendar({displayer}) {
     setView(view);
   }
           
-  React.useEffect(() =>{
+  useEffect(() =>{
       fetchMonthsEvents(date,setMonthEvents);
   },[date, month])
 
-  React.useEffect(() => {
-      setStatus(determineStatus(date))
+  useEffect(() => {
+      setStatus(determineStatus(date,monthEvents))
   },[date,monthEvents])
 
   const events = determineEvents(view,date,monthEvents);
