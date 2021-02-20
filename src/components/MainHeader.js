@@ -3,9 +3,11 @@ import "../App.css"
 import logo from "../assets/bountifulbasementlogo.png";
 
 import netlifyIdentity from 'netlify-identity-widget';
+import AlertBar from './AlertBar'
 
 function MainHeader() {
-    return (
+    return (<>
+        <AlertBar />
         <header className='main-header'>
             <a href="/"><img className='logo' src={logo} alt="Bountiful Basement"/></a>
             <nav>
@@ -31,7 +33,7 @@ function MainHeader() {
                 </ul>
             </nav>
         </header>
-    )
+    </>)
 }
 
 export default MainHeader

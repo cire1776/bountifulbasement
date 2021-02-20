@@ -1,6 +1,5 @@
 .main-header {
   display: flex;
-  outline: 1px solid red;
   align-items: center;
   height: 6rem;
   overflow:visible;
@@ -71,7 +70,7 @@
     left: 0;
     top: 0;
     background-color: darkgrey;
-    height: 100vh;
+    height: 200vh;
     z-index: 1;
     text-align: center;
 
@@ -87,3 +86,10 @@
   pointer-events: none;
 }
 
+.alertbar {
+  min-height: 24px;
+  background-color: darkred;
+  color: rgb(224, 212, 37);
+  text-align: center;
+  font-size: 1.1rem;
+}
