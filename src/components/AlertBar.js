@@ -13,7 +13,6 @@ async function fetchAlertMessages(cb) {
         });
 
         if (cb) {
-            console.log(messages);
             cb(messages);
         }
 
