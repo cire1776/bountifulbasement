@@ -11,18 +11,15 @@ function Protected({children}) {
 
     function checkinUser(user) {
         setUser(user)
-        console.log(user);
     }
 
     function checkoutUser() {
         setUser(null)
-        console.log(user);
     }
 
     netlifyIdentity.on('login', checkinUser);
     netlifyIdentity.on('logout', checkoutUser);
 
-    console.log(user);
     if (!user) {
         return  <section>
                     <h1>You must be logged in to access this page</h1>
