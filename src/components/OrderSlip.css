@@ -42,10 +42,6 @@ h1 {
     margin-left: 0.5em;
 }
 
-li + li {
-    /* outline: 1px solid red; */
-}
-
 footer {
     float: right;
     padding-right: 2rem;

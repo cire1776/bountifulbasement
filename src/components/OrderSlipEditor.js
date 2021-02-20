@@ -8,6 +8,7 @@ import Protected from './Protected';
 import MainHeader from './MainHeader';
 import OrderSlip from './OrderSlip';
 import ModalDialog from './ModalDialog';
+import EditableItemName from './EditableItemName';
 
 
 function OrderSlipEditor() {
