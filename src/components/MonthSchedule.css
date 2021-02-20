@@ -1,0 +1,24 @@
+article.calendar aside {
+  width: 350px;
+}
+
+article.calendar aside h1 {
+  font-size: 1rem;
+  margin-bottom: 1em;
+}
+
+article.calendar aside h2 {
+  font-size: 1rem;
+}
+
+article.calendar aside .primary {
+  color: blue;
+}
+
+article.calendar aside .alert {
+  color: red;
+}
+
+article.calendar aside .subdued {
+  color: lightgray;
+}

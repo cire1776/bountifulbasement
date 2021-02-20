@@ -2,6 +2,7 @@ import React from 'react'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 import OrderSlipSheet from './pages/OrderSlipSheet'
 import OrderSlipEditor from './pages/OrderSlipEditor'
+import BBCalendar from './pages/BBCalendar'
 import Home from './pages/Home'
 
 function App() {
@@ -16,6 +17,10 @@ function App() {
             <Route path="/orderslips/editor">
                 <OrderSlipEditor />
             </Route>
+            <Route path="/calendar">
+                <BBCalendar />
+            </Route>
+
         </Router>
     )
 }
