@@ -78,7 +78,7 @@ function EditableItemList({items, categories, setItems, refresher}) {
 
     return <>
     <ul className='list-of-items'>
-        <header>
+        <header key="header">
             <span>S</span>
             <span>Name</span>
             <span>Category</span>
@@ -98,7 +98,7 @@ function EditableItemList({items, categories, setItems, refresher}) {
                             <select name={id} id={id} value={item.category} onChange={(event)=>changeCategory(event, id)}>
                                 {
                                     categories.map((category) => { 
-                                        return <option value={category}>{category} </option>
+                                        return <option key={category} value={category}>{category} </option>
                                     })
                                 }
                             </select>
@@ -110,10 +110,10 @@ function EditableItemList({items, categories, setItems, refresher}) {
 
     }
     {
-        (editedItem === 0) ? <li>
-            <div></div><EditableItemName id={0} endEditingItem={endEditingItem}/>
+        (editedItem === 0) ? <li key={0}>
+            <div></div><EditableItemName endEditingItem={endEditingItem}/>
         </li>
-        : <button type='button' onClick={(event)=>beginEditingItem(0)}><img src={plus} alt="add"/> </button>
+        : <button key='button' type='button' onClick={(event)=>beginEditingItem(0)}><img src={plus} alt="add"/> </button>
     } 
     </ul>
     <ModalDialog activate={!!deletingId} confirmTitle="Delete" confirmAction={()=>deleteItem(deletingId, refresher)} dismiss={()=>setDeletingId(null)}>
