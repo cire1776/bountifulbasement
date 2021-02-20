@@ -1,7 +1,7 @@
 import React from 'react'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
-import OrderSlipSheet from './components/OrderSlipSheet'
-import OrderSlipEditor from './components/OrderSlipEditor'
+import OrderSlipSheet from './pages/OrderSlipSheet'
+import OrderSlipEditor from './pages/OrderSlipEditor'
 function App() {
     return (
         <Router>

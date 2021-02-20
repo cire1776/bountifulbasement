@@ -1,10 +1,10 @@
 import React, {useEffect,useState} from 'react'
-import {fetchEditableItems, fetchSlipItems,fetchCategories, createItem, updateFields, deleteItem} from './order_slip_loader';
+import {fetchEditableItems, fetchSlipItems,fetchCategories, createItem, updateFields, deleteItem} from '../components/order_slip_loader';
 
-import Protected from './Protected';
-import MainHeader from './MainHeader';
-import OrderSlip from './OrderSlip';
-import EditableItemList from './EditableItemList';
+import Protected from '../components/Protected';
+import MainHeader from '../components/MainHeader';
+import OrderSlip from '../components/OrderSlip';
+import EditableItemList from '../components/EditableItemList';
 
 
 function OrderSlipEditor() {

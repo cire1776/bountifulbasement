@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import OrderSlip from './OrderSlip';
-import {fetchSlipItems, fetchCategories} from './order_slip_loader.js';
+import OrderSlip from '../components/OrderSlip';
+import {fetchSlipItems, fetchCategories} from '../components/order_slip_loader.js';
 
 function OrderSlipSheet() {
   const [items, setItems] = useState({});
