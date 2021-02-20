@@ -4,24 +4,19 @@ import pencil from '../assets/pencil.svg';
 import trashcan from '../assets/trash.svg'
 import plus from '../assets/plus.svg';
 
+import Protected from './Protected';
+import MainHeader from './MainHeader';
 import OrderSlip from './OrderSlip';
 import ModalDialog from './ModalDialog';
-import EditableItemName from './EditableItemName';
-
-import netlifyIdentity from 'netlify-identity-widget';
 
 
 function OrderSlipEditor() {
-    const user = netlifyIdentity.currentUser();
-    console.log({ user });
-
     const [orderSlipItems, setOrderSlipItems] = useState({});
     const [items, setItems] = useState([]);
     const [categories, setCategories] = useState([]);
     const [editedItem, setEditedItem] = useState(null)
     const [count, setCount] = useState(0);
     const [deletingId, setDeletingId] = useState(null);
-    const editFieldRef = React.useRef()
     
     useEffect(() => {
         fetchSlipItems(setOrderSlipItems);
@@ -35,13 +30,7 @@ function OrderSlipEditor() {
     useEffect(() => {
     }, [items])
 
-    if (!user) {
-        return  <section>
-                    <h1>You must be logged in to access this page</h1>
-                    <button onClick={netlifyIdentity.open()}>Login</button>
-                </section>
-    }
-
+    
     function toggleStatus(id) {
         const newStatus = items[id].status === 'use' ? 'skip' : 'use';
         items[id].status = items[id].status === 'use' ? 'skip' : 'use';
@@ -112,7 +101,9 @@ function OrderSlipEditor() {
     if(items.length === 0 || categories.length === 0) {
         return <h1>Loading...</h1>
     }
-    return (<main>
+    return (<Protected> 
+        <MainHeader />
+        <main>
         <div className='editor'>
             <OrderSlip items={orderSlipItems} categories={categories}/>
             <ul className='list-of-items'>
@@ -162,7 +153,8 @@ function OrderSlipEditor() {
             <h1>Are you sure you want to delete '{deletingId && items[deletingId].name}'?
             </h1>
         </ModalDialog>
-    </main>)
+    </main>
+    </Protected>)
 }
 
 export default OrderSlipEditor
