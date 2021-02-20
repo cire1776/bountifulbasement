@@ -15,7 +15,7 @@ import {TODAY, NEXT_YEAR} from '../common.js';
   open-evening
 */
 
-function BBCalendar() {
+function BBCalendar({displayer}) {
   const [date, setDate] = useState(new Date());
   const [status, setStatus] = useState('normally-closed')
   const [month, setMonth] = useState("");
@@ -73,25 +73,25 @@ function BBCalendar() {
         break;
     }
   }
-  const displaySchedule = (view) => {
+  const displaySchedule = (view, date, events, status) => {
     switch (view) {
       case 'month':
         return <DaySchedule date={date} events={events} status={status}/>
-        case 'year':
-          return <MonthSchedule date={date} events={events} status={status}/>
-          default:
-            break;
-          }
-        }
+      case 'year':
+        return <MonthSchedule date={date} events={events} status={status}/>
+      default:
+        break;
+    }
+  }
         
-        const onViewChange = ({activeStartDate, value, view}) => {
-          if (view === 'month') {
-            setDate(activeStartDate);
-          } else if (view === 'year') {
-            setDate(value);
-          }
-          setView(view);
-        }
+  const onViewChange = ({activeStartDate, value, view}) => {
+    if (view === 'month') {
+      setDate(activeStartDate);
+    } else if (view === 'year') {
+      setDate(value);
+    }
+    setView(view);
+  }
           
   React.useEffect(() =>{
       fetchMonthsEvents(date,setMonthEvents);
@@ -102,6 +102,10 @@ function BBCalendar() {
   },[date,monthEvents])
 
   const events = determineEvents(view,date,monthEvents);
+
+  if (!displayer) {
+    displayer = displaySchedule;
+  }
 
   return (
     <article className='calendar'>
@@ -119,7 +123,7 @@ function BBCalendar() {
         showNeighboringMonth={false}
       />
 
-      {displaySchedule(view)}
+      {displayer(view, date, events, status)}
     </article>
   );
 }
