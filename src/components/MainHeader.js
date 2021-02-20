@@ -11,7 +11,7 @@ function MainHeader() {
         <header className='main-header'>
             <a href="/"><img className='logo' src={logo} alt="Bountiful Basement"/></a>
             <nav>
-                <label for="hamburger">&#9776;</label>
+                <label htmlFor="hamburger">&#9776;</label>
                 <input type="checkbox" id="hamburger"/>
 
                 <ul>
