@@ -1,22 +1,36 @@
 import React from 'react'
+import "../App.css"
+import logo from "../assets/bountifulbasementlogo.png";
 
 import netlifyIdentity from 'netlify-identity-widget';
-console.log (netlifyIdentity.currentUser());
 
 function MainHeader() {
     return (
-        <div>
-            Bountiful Basement
-            {
-            netlifyIdentity.currentUser() ?
-                <button type='button' onClick={()=>netlifyIdentity.logout()}>
-                    Logout
-                </button>
-            :   <button type='button' onClick={()=>netlifyIdentity.open()}>
-                    Login
-                </button>
-            }
-        </div>
+        <header className='main-header'>
+            <a href="/"><img className='logo' src={logo} alt="Bountiful Basement"/></a>
+            <nav>
+                <label for="hamburger">&#9776;</label>
+                <input type="checkbox" id="hamburger"/>
+
+                <ul>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/calendar">Calendar</a></li>
+                    <li><a href="/news">What's New</a></li>
+                    <li><a href="/community">Community BB</a></li>
+                    <li><a href="/difference">Making a Difference</a></li>
+                    <li><a href="/recipes">Recipes</a></li>
+                    {
+                    netlifyIdentity.currentUser() ?
+                        <li onClick={()=>netlifyIdentity.logout()}>
+                            Logout
+                        </li>
+                    :   <li onClick={()=>netlifyIdentity.open()}>
+                            Login
+                        </li>
+                    }
+                </ul>
+            </nav>
+        </header>
     )
 }
 
