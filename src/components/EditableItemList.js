@@ -72,13 +72,19 @@ function EditableItemList({ items, categories, setItems, refresher }) {
     if (newName === "") {
       return;
     }
-    createItem({
-      fields: {
-        item: newName,
-        status: "use",
+    createItem(
+      {
+        fields: {
+          item: newName,
+          status: "use",
+          category: "meat",
+        },
       },
-      refresher,
-    });
+      () => {
+        refresher();
+        setItems(items);
+      }
+    );
   }
 
   return (

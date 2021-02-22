@@ -23,6 +23,7 @@ function OrderSlipEditor() {
     fetchSlipItems(setOrderSlipItems);
     fetchCategories(setCategories);
     fetchEditableItems(setItems);
+    console.log("refreshing data");
   }, [count]);
 
   useEffect(() => {}, [orderSlipItems]);

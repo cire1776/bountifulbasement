@@ -85,10 +85,11 @@ export async function createItem(fields, refresher) {
   })
     .base("appPJGWfywLNUoPkg")
     .table("order-slip-data");
-  await airtable.create(fields);
-
+  const response = await airtable.create(fields);
+  console.log(response);
   if (refresher) {
     refresher();
+    console.log("calling refresher");
   }
 }
 
