@@ -49,12 +49,12 @@ footer {
   padding-top: 2rem;
 }
 
-.editor {
+.orderslip-editor {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
-.editor .order-slip {
+.orderslip-editor .order-slip {
   box-shadow: 10px 10px 5px 5px lightgray;
   position: fixed;
   margin: 3em;
