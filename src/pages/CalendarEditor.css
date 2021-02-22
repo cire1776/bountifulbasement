@@ -1,0 +1,41 @@
+.editor button {
+    margin-top: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.editor ul {
+    margin-top:2rem;
+    list-style: none;
+}
+
+.editor li {
+    height: 28px;
+}
+
+.editor li:nth-child(even) {
+    background-color: lightblue;
+}
+
+.editor h2 {
+    display: inline;
+    font-size: 20px;
+    font-weight: 400;
+    width: 80%;
+}
+.editor input[type="text"] {
+    display: inline;
+    font-size: 20px;
+    font-weight: 400;
+    width: 80%;
+}
+
+.editor li {
+    display: grid;
+    grid-template-columns: 1fr 2rem 2rem;
+}
+
+.editor li img {
+    position: relative;
+    top: 6px;
+}

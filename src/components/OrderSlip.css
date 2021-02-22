@@ -1,154 +1,153 @@
 .slip-sheet {
-    width: 8.5in;
-    height: 11in;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  width: 8.5in;
+  height: 11in;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-article {
-    width: 4.5in;
-    height: calc(11in/3);
-    font-size: 13px;
-    text-align: center;
-    outline: 1px dashed lightgrey;
+.order-slip {
+  width: 4.5in;
+  height: calc(11in / 3);
+  font-size: 13px;
+  text-align: center;
+  outline: 1px dashed lightgrey;
 }
 
 header {
-    white-space: nowrap;
+  white-space: nowrap;
 }
 
 header p {
-    padding-top: 20px;
+  padding-top: 20px;
 }
 
 header p:last-child {
-    padding-top: 10px;
+  padding-top: 10px;
 }
 
 h1 {
-    font-size: 13px;
-    text-transform: uppercase;
+  font-size: 13px;
+  text-transform: uppercase;
 }
 
-.item-list ul {
-    display: flex;
-    flex-basis: 25%;
-    flex-wrap: wrap;
+.item-list {
+  display: flex;
+  flex-basis: 25%;
+  flex-wrap: wrap;
+  margin-left: 2rem;
 }
 
 .item-list li {
-    list-style: none;
-    white-space: nowrap;
-    margin-left: 0.5em;
+  list-style: none;
+  white-space: nowrap;
+  margin-left: 0.5em;
 }
 
 footer {
-    float: right;
-    padding-right: 2rem;
-    padding-top: 2rem;
+  float: right;
+  padding-right: 2rem;
+  padding-top: 2rem;
 }
 
 .editor {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-.editor .order-slip{
-    box-shadow: 10px 10px 5px 5px lightgray;
-    position: fixed;
-    margin: 3em;
+.editor .order-slip {
+  box-shadow: 10px 10px 5px 5px lightgray;
+  position: fixed;
+  margin: 3em;
 }
 
 .list-of-items {
-    position: relative;
-    left: 500px;
-    width:400px;
-    text-align: center;
-    margin-top: 3em;
+  position: relative;
+  left: 500px;
+  width: 400px;
+  text-align: center;
+  margin-top: 3em;
 }
 
 .list-of-items li {
-    text-align: left;
-    list-style: none;
-    display: grid;
-    grid-template-columns: 1.5rem 15rem 5rem 2rem 2rem;
+  text-align: left;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1.5rem 15rem 5rem 2rem 2rem;
 }
 
 .list-of-items input[type="checkbox"],
-.list-of-items li img
-{
-    position: relative;
-    top: 5px;
+.list-of-items li img {
+  position: relative;
+  top: 5px;
 }
 
 .list-of-items select {
-    /* background-color: inherit; */
-    position: relative;
-    top: 2px;
-
+  /* background-color: inherit; */
+  position: relative;
+  top: 2px;
 }
 .list-of-items li:nth-child(even) {
-    background-color: lightblue;
+  background-color: lightblue;
 }
 
 .list-of-items h2 {
-    display: inline;
-    font-size: 20px;
-    font-weight: 400;
-    width: 80%;
-    outline: 1px color blue;
+  display: inline;
+  font-size: 20px;
+  font-weight: 400;
+  width: 80%;
+  outline: 1px color blue;
 }
 
 .list-of-items input {
-    display: inline;
+  display: inline;
 }
 
 .list-of-items select {
-    margin-right: 2em;
-    width: 10ch;
+  margin-right: 2em;
+  width: 10ch;
 }
 
 .list-of-items button {
-    width: 2rem;
-    height: 2rem;
+  width: 2rem;
+  height: 2rem;
 }
 
-.list-of-items input[type='text'] {
-    font-size: 20px;
-    width: 100%;
+.list-of-items input[type="text"] {
+  font-size: 20px;
+  width: 100%;
 }
 
 .list-of-items header {
-    display: grid;
-    grid-template-columns: 1.5rem 15rem 5rem 2rem 2rem;
-    background-color: rgb(15, 15, 189);
-    color: white;
+  display: grid;
+  grid-template-columns: 1.5rem 15rem 5rem 2rem 2rem;
+  background-color: rgb(15, 15, 189);
+  color: white;
 }
 
 main {
-    position:relative;
+  position: relative;
 }
 
 .backdrop {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0,0,0,0.3);
-    padding: 50;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 50;
 }
 
 .modal-dialog {
-    background-color: #fff;
-    border-radius: 5px;
-    max-width: 500px;
-    min-height: 300px;
-    margin: 0 auto;
-    padding: 30px;
-    text-align: center;
+  background-color: #fff;
+  border-radius: 5px;
+  max-width: 500px;
+  min-height: 300px;
+  margin: 0 auto;
+  padding: 30px;
+  text-align: center;
 }
 
 .modal-dialog footer {
-    text-align: center;
+  text-align: center;
 }

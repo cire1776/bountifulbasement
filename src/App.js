@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route} from 'react-router-dom'
 import OrderSlipSheet from './pages/OrderSlipSheet'
 import OrderSlipEditor from './pages/OrderSlipEditor'
 import BBCalendar from './pages/BBCalendar'
+import CalendarEditor from './pages/CalendarEditor'
 import Home from './pages/Home'
 
 function App() {
@@ -17,8 +18,11 @@ function App() {
             <Route path="/orderslips/editor">
                 <OrderSlipEditor />
             </Route>
-            <Route path="/calendar">
+            <Route exact path="/calendar">
                 <BBCalendar />
+            </Route>
+            <Route path="/calendar/Editor">
+                <CalendarEditor />
             </Route>
 
         </Router>

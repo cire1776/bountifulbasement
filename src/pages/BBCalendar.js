@@ -15,11 +15,12 @@ import {TODAY, NEXT_YEAR} from '../common.js';
   open-evening
 */
 
-function BBCalendar({displayer}) {
+function BBCalendar({displayer, registerEventSetter}) {
   const [date, setDate] = useState(new Date());
   const [status, setStatus] = useState('normally-closed')
   const [month, setMonth] = useState("");
   const [monthEvents, setMonthEvents] = useState(null)
+  const [events, setEvents] = useState([])
   const [view, setView] = useState('month')
 
   const onChange = (date) => {
@@ -100,16 +101,28 @@ function BBCalendar({displayer}) {
     }
     setView(view);
   }
-          
+     
+  useEffect(() => {
+    if (registerEventSetter) {
+      registerEventSetter(setEvents);
+    }
+    return () => {
+      registerEventSetter(null);
+    }
+  }, []
+  )
   useEffect(() =>{
       fetchMonthsEvents(date,setMonthEvents);
   },[date, month])
 
   useEffect(() => {
       setStatus(determineStatus(date,monthEvents))
-  },[date,monthEvents])
+      setEvents(determineEvents(view,date,monthEvents));
+  },[date,monthEvents,view])
 
-  const events = determineEvents(view,date,monthEvents);
+  useEffect(()=>{
+  }, [events])
+
 
   if (!displayer) {
     displayer = displaySchedule;
