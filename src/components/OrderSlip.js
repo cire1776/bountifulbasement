@@ -2,6 +2,15 @@ import React from "react";
 import "./OrderSlip.css";
 
 function OrderSlip({ items, categories, date }) {
+  function remainder(item) {
+    let remainder = item.remainder;
+
+    if (remainder) {
+      return `(${remainder})`;
+    }
+    return "";
+  }
+
   const header = (
     <header>
       <p>Last _______________________ First ______________________</p>
@@ -27,7 +36,13 @@ function OrderSlip({ items, categories, date }) {
             <ul className="item-list">
               {has_none && <li key={`none_${name}`}>___None</li>}
               {items[name].map((item) => {
-                return <li key={item}>___{item}</li>;
+                const { name: itemName } = item;
+                return (
+                  <li key={itemName}>
+                    ___{itemName}
+                    {remainder(item)}
+                  </li>
+                );
               })}
             </ul>
           </section>

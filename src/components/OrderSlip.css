@@ -63,7 +63,7 @@ footer {
 .list-of-items {
   position: relative;
   left: 500px;
-  width: 400px;
+  width: 475px;
   text-align: center;
   margin-top: 3em;
 }
@@ -72,7 +72,7 @@ footer {
   text-align: left;
   list-style: none;
   display: grid;
-  grid-template-columns: 1.5rem 15rem 5rem 2rem 2rem;
+  grid-template-columns: 1.5rem 15rem 5rem 5rem 2rem 2rem;
 }
 
 .list-of-items input[type="checkbox"],
@@ -82,10 +82,15 @@ footer {
 }
 
 .list-of-items select {
-  /* background-color: inherit; */
   position: relative;
   top: 2px;
+  margin: 0 auto;
 }
+
+.list-of-items select.remainder {
+  width: 3rem;
+}
+
 .list-of-items li:nth-child(even) {
   background-color: lightblue;
 }
@@ -103,7 +108,6 @@ footer {
 }
 
 .list-of-items select {
-  margin-right: 2em;
   width: 10ch;
 }
 
@@ -119,7 +123,7 @@ footer {
 
 .list-of-items header {
   display: grid;
-  grid-template-columns: 1.5rem 15rem 5rem 2rem 2rem;
+  grid-template-columns: 1.5rem 15rem 5rem 5rem 2rem 2rem;
   background-color: rgb(15, 15, 189);
   color: white;
 }

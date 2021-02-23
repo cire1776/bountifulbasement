@@ -19,7 +19,10 @@ export async function fetchSlipItems(itemSetter) {
     }
 
     if (record.fields.status === "use") {
-      accum[category].push(record.fields.item);
+      accum[category].push({
+        name: record.fields.item,
+        remainder: record.fields.remainder,
+      });
     }
     return accum;
   }, {});
@@ -47,8 +50,8 @@ export async function fetchEditableItems(setter) {
 
   for (const item of records) {
     const { id, createdTime } = item;
-    const { item: name, status, category } = item.fields;
-    newItems[id] = { name, category, status, createdTime };
+    const { item: name, status, category, remainder } = item.fields;
+    newItems[id] = { name, category, status, remainder, createdTime };
   }
 
   setter(newItems);

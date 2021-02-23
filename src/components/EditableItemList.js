@@ -13,6 +13,11 @@ import {
 } from "./order_slip_loader";
 import ModalDialog from "./ModalDialog";
 
+const REMAINDER_RANGE = [" "];
+for (let c = 1; c <= 12; c++) {
+  REMAINDER_RANGE.push(c.toString());
+}
+
 function EditableItemList({ items, categories, setItems, refresher }) {
   const [editedItem, setEditedItem] = useState(null);
   const [deletingId, setDeletingId] = useState(null);
@@ -37,6 +42,8 @@ function EditableItemList({ items, categories, setItems, refresher }) {
     newIndex = sort(newIndex);
     setIndex(newIndex);
   }, [items, sortDirection, sortCriteria]);
+
+  useEffect(() => {}, []);
 
   function sort(index) {
     function compareStatus(a, b) {
@@ -92,8 +99,6 @@ function EditableItemList({ items, categories, setItems, refresher }) {
 
     let specifiedCriteria = sortCriteria || "createdTime";
 
-    console.log(specifiedCriteria);
-
     return sortDirection === "asc"
       ? index.sort(compareFuncs[specifiedCriteria])
       : index.sort((a, b) => -compareFuncs[specifiedCriteria](a, b));
@@ -107,7 +112,15 @@ function EditableItemList({ items, categories, setItems, refresher }) {
 
   function changeCategory(event, id) {
     const newCategory = event.target.value;
-    updateFields(event.target.id, { category: newCategory }, refresher);
+    updateFields(id, { category: newCategory }, refresher);
+  }
+
+  function changeRemainder(event, id) {
+    let newRemainder = event.target.value;
+    if (newRemainder === " ") {
+      newRemainder = "";
+    }
+    updateFields(id, { remainder: newRemainder }, refresher);
   }
 
   function checkDeleteItem(id) {
@@ -216,6 +229,7 @@ function EditableItemList({ items, categories, setItems, refresher }) {
           <span onClick={() => toggleSearch("category")}>
             Category {sortDecorator("category")}
           </span>
+          <span>Left</span>
         </header>
         {index
           .filter((id) => !!items[id])
@@ -266,6 +280,21 @@ function EditableItemList({ items, categories, setItems, refresher }) {
                           value={category.category}
                         >
                           {category.category}{" "}
+                        </option>
+                      );
+                    })}
+                  </select>
+                  <select
+                    className="remainder"
+                    name={`remainder_${id}`}
+                    id={`remainder_${id}`}
+                    value={item.remainder ? item.remainder : " "}
+                    onChange={(event) => changeRemainder(event, id)}
+                  >
+                    {REMAINDER_RANGE.map((remainder) => {
+                      return (
+                        <option key={remainder} value={remainder}>
+                          {remainder}
                         </option>
                       );
                     })}
