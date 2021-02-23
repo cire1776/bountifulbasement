@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import pencil from "../assets/pencil.svg";
 import trashcan from "../assets/trash.svg";
 import plus from "../assets/plus.svg";
-import EditableItemName from "./EditableItemName";
+import EditableText from "./EditableText";
 import {
   fetchEditableItems,
   fetchSlipItems,
@@ -247,10 +247,10 @@ function EditableItemList({ items, categories, setItems, refresher }) {
                     checked={item.status === "use"}
                     onChange={() => toggleStatus(id)}
                   />
-                  <EditableItemName
+                  <EditableText
                     id={id}
-                    name={item.name}
-                    changeName={changeName}
+                    text={item.name}
+                    changeProc={changeName}
                     endEditingItem={endEditingItem}
                   />
                 </li>
@@ -318,7 +318,7 @@ function EditableItemList({ items, categories, setItems, refresher }) {
         {editedItem === 0 ? (
           <li key={0}>
             <div></div>
-            <EditableItemName endEditingItem={endEditingItem} />
+            <EditableText endEditingItem={endEditingItem} />
           </li>
         ) : (
           <button

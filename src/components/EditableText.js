@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 
-function EditableItemName({ id, name, changeName, endEditingItem }) {
+function EditableText({ id, text, changeProc, endEditingItem }) {
   const editFieldRef = React.useRef();
-  const originalValue = React.useRef(name);
+  const originalValue = React.useRef(text);
 
   function handleKey(event) {
     if (event.code === "Escape") {
@@ -19,15 +19,15 @@ function EditableItemName({ id, name, changeName, endEditingItem }) {
   return (
     <input
       type="text"
-      defaultValue={name}
+      defaultValue={text}
       onKeyUp={handleKey}
       ref={editFieldRef}
       onChange={(event) => {
-        changeName && changeName(id, event.target.value);
+        changeProc && changeProc(id, event.target.value);
       }}
       onBlur={(event) => endEditingItem(event.target.value)}
     ></input>
   );
 }
 
-export default EditableItemName;
+export default EditableText;
