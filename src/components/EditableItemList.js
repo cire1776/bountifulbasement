@@ -17,8 +17,8 @@ function EditableItemList({ items, categories, setItems, refresher }) {
   const [editedItem, setEditedItem] = useState(null);
   const [deletingId, setDeletingId] = useState(null);
   const [index, setIndex] = useState([]);
-  const [sortCriteria, setSortCriteria] = useState("name");
-  const [sortDirection, setSortDirection] = useState("asc");
+  const [sortCriteria, setSortCriteria] = useState(null);
+  const [sortDirection, setSortDirection] = useState(null);
 
   useEffect(() => {
     let newIndex = [...index];
