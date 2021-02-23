@@ -7,7 +7,10 @@ export async function fetchSlipItems(itemSetter) {
     .base("appPJGWfywLNUoPkg")
     .table("order-slip-data");
 
-  const { records } = await airtable.list();
+  const { records } = await airtable.list({
+    pageSize: 100, // optional
+    axRecords: 200, // optional
+  });
   const newItems = records.reduce((accum, record) => {
     const category = record.fields.category;
 
@@ -35,14 +38,17 @@ export async function fetchEditableItems(setter) {
     .base("appPJGWfywLNUoPkg")
     .table("order-slip-data");
 
-  const { records } = await airtable.list();
+  const { records } = await airtable.list({
+    pageSize: 100,
+    maxRecords: 200, // optional} // optional
+  });
 
   const newItems = {};
 
   for (const item of records) {
-    const { id } = item;
+    const { id, createdTime } = item;
     const { item: name, status, category } = item.fields;
-    newItems[id] = { name, category, status };
+    newItems[id] = { name, category, status, createdTime };
   }
 
   setter(newItems);
@@ -86,10 +92,9 @@ export async function createItem(fields, refresher) {
     .base("appPJGWfywLNUoPkg")
     .table("order-slip-data");
   const response = await airtable.create(fields);
-  console.log(response);
+
   if (refresher) {
-    refresher();
-    console.log("calling refresher");
+    refresher(response);
   }
 }
 

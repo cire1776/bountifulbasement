@@ -23,12 +23,9 @@ function OrderSlipEditor() {
     fetchSlipItems(setOrderSlipItems);
     fetchCategories(setCategories);
     fetchEditableItems(setItems);
-    console.log("refreshing data");
   }, [count]);
 
   useEffect(() => {}, [orderSlipItems]);
-
-  useEffect(() => {}, [items]);
 
   if (items.length === 0 || categories.length === 0) {
     return <h1>Loading...</h1>;

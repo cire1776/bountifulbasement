@@ -5,7 +5,6 @@ function EditableItemName({ id, name, changeName, endEditingItem }) {
   const originalValue = React.useRef(name);
 
   function handleKey(event) {
-    console.log(event);
     if (event.code === "Escape") {
       endEditingItem(originalValue.current);
     } else if (event.code === "Enter" || event.code === "NumpadEnter") {
