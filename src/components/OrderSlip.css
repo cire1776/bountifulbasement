@@ -6,6 +6,7 @@
 }
 
 .order-slip {
+  background-color: white;
   width: 4.5in;
   height: calc(11in / 3);
   font-size: 13px;

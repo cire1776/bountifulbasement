@@ -1,9 +1,13 @@
+body {
+  background-color: rgb(231, 226, 209);
+}
+
 .main-header {
   display: flex;
   align-items: center;
   height: 6rem;
-  overflow:visible;
-  background-image: url('./assets/brickwall.jpg');
+  overflow: visible;
+  background-image: url("./assets/brickwall.jpg");
   color: white;
   font-weight: 800;
 }
@@ -12,7 +16,10 @@
   width: 100%;
 }
 
-.main-header label, #hamburger { display: none; }
+.main-header label,
+#hamburger {
+  display: none;
+}
 
 .main-header nav a {
   width: calc(100% / 7);
@@ -25,7 +32,6 @@
 .main-header nav a:hover {
   background: #401408;
 }
-
 
 .main-header ul {
   display: flex;
@@ -45,10 +51,10 @@
   color: white;
 }
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 900px) {
   /* Show Hamburger Icon */
-  .main-header label { 
-    display: block; 
+  .main-header label {
+    display: block;
     color: white;
     font-style: normal;
     font-size: 2em;
@@ -62,7 +68,6 @@
     width: 100%;
   }
 
-
   /* Toggle Show/Hide Menu */
   .main-header ul {
     display: none;
@@ -73,9 +78,10 @@
     height: 200vh;
     z-index: 1;
     text-align: center;
-
   }
-  .main-header input:checked ~ ul { display: block; }
+  .main-header input:checked ~ ul {
+    display: block;
+  }
 }
 
 .logo {
