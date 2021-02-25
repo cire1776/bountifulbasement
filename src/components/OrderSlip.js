@@ -14,7 +14,7 @@ function OrderSlip({ items, categories, date }) {
   const header = (
     <header>
       <p>Last _______________________ First ______________________</p>
-      <p># _______ # in Family ___________</p>
+      <p># _________ # in Family _________</p>
       <p>☐ Walking ☐ Cart ☐ Bags ☐ No Pork</p>
     </header>
   );
@@ -32,19 +32,24 @@ function OrderSlip({ items, categories, date }) {
 
         return (
           <section key={name}>
-            <h1>{name}</h1>
-            <ul className="item-list">
-              {has_none && <li key={`none_${name}`}>___None</li>}
-              {items[name].map((item) => {
-                const { name: itemName } = item;
-                return (
-                  <li key={itemName}>
-                    ___{itemName}
-                    {remainder(item)}
-                  </li>
-                );
-              })}
-            </ul>
+            {items[name] && items[name].length > 0 && (
+              <>
+                <h1>{name}</h1>
+                <ul className="item-list">
+                  {has_none && <li key={`none_${name}`}>___None</li>}
+                  {items[name].map((item) => {
+                    let { name: itemName } = item;
+                    itemName = itemName.replace(/\ /g, "\xa0");
+                    return (
+                      <li key={itemName}>
+                        ___{itemName}
+                        {remainder(item)}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </>
+            )}
           </section>
         );
       })}

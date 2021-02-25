@@ -46,7 +46,7 @@ h1 {
 footer {
   float: right;
   padding-right: 2rem;
-  padding-top: 2rem;
+  padding-top: 0.5rem;
 }
 
 .orderslip-editor {
@@ -79,6 +79,10 @@ footer {
 .list-of-items li img {
   position: relative;
   top: 5px;
+}
+
+.list-of-items .skip {
+  color: #777777;
 }
 
 .list-of-items select {
