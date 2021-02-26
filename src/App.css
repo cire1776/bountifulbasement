@@ -95,6 +95,7 @@ body {
 }
 
 .logo {
+  display: none;
   position: relative;
   left: -4rem;
   top: 1.5em;
@@ -113,6 +114,14 @@ body {
 
 .alertbar h1 {
   display: none;
+}
+
+@media screen and (min-width: 280px) {
+  .logo {
+    display: block;
+    height: 20rem;
+    top: 0;
+  }
 }
 
 @media screen and (min-width: 1000px) {
@@ -147,6 +156,8 @@ body {
 
   .alertbar h1 {
     display: block;
+    position: relative;
+    left: 10rem;
     font-size: 1.1rem;
     line-height: normal;
   }
