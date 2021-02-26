@@ -3,22 +3,17 @@ body {
 }
 
 .main-header {
+  position: relative;
+  top: 3rem;
+  width: 100vw;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   height: 6rem;
   overflow: visible;
   background-image: url("./assets/brickwall.jpg");
   color: white;
   font-weight: 800;
-}
-
-.main-header nav {
-  width: 100%;
-}
-
-.main-header label,
-#hamburger {
-  display: none;
 }
 
 .main-header nav a {
@@ -29,16 +24,14 @@ body {
   text-align: center;
 }
 
-.main-header nav a:hover {
+.main-header nav a:hover,
+.main-header ul li:last-child:hover {
   background: #401408;
 }
 
-.main-header ul {
-  display: flex;
-}
-
 .main-header li {
-  margin: 1.5em;
+  /* margin: 1.5em; */
+  margin-top: 1.5em;
   list-style: none;
 }
 
@@ -51,51 +44,110 @@ body {
   color: white;
 }
 
-@media screen and (max-width: 900px) {
-  /* Show Hamburger Icon */
-  .main-header label {
-    display: block;
-    color: white;
-    font-style: normal;
-    font-size: 2em;
-    padding: 10px;
-    float: right;
-  }
+/* Show Hamburger Icon */
+.main-header label {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  display: block;
+  color: white;
+  font-style: normal;
+  font-size: 2em;
+  padding: 10px;
+  float: right;
+}
 
-  /* Break down menu items into vertical */
-  .main-header nav a {
-    display: block;
-    width: 100%;
-  }
+/* Break down menu items into vertical */
+.main-header nav a {
+  display: block;
+  width: 100%;
+}
 
-  /* Toggle Show/Hide Menu */
-  .main-header ul {
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background-color: darkgrey;
-    height: 200vh;
-    z-index: 1;
-    text-align: center;
-  }
-  .main-header input:checked ~ ul {
-    display: block;
-  }
+/* Toggle Show/Hide Menu */
+.main-header ul {
+  display: block;
+  position: absolute;
+  left: -200px;
+  top: -5rem;
+  background-color: #222222;
+  height: 200vh;
+  z-index: 1;
+  text-align: center;
+  transition: left 0.7s;
+}
+
+.main-header input:checked ~ ul {
+  display: block;
+  left: 0;
+}
+
+.main-header ul li:last-child {
+  padding: 0.75em;
+}
+
+.main-header a:hover,
+.main-header ul li:last-child:hover {
+  color: yellow;
+}
+
+#hamburger {
+  display: none;
 }
 
 .logo {
   position: relative;
-  left: -2rem;
+  left: -4rem;
   top: 1.5em;
-  height: 15rem;
-  pointer-events: none;
+  height: 25rem;
 }
 
 .alertbar {
+  position: relative;
+  top: 3rem;
   min-height: 24px;
   background-color: darkred;
   color: rgb(224, 212, 37);
   text-align: center;
   font-size: 1.1rem;
+}
+
+.alertbar h1 {
+  display: none;
+}
+
+@media screen and (min-width: 1000px) {
+  .main-header label,
+  #hamburger {
+    display: none;
+  }
+
+  .main-header nav ul {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background-color: transparent;
+    height: 6rem;
+    z-index: 1;
+    text-align: left;
+    transition: none;
+  }
+
+  .main-header nav {
+    width: calc(100vw - 15rem);
+    position: relative;
+    left: -10rem;
+  }
+
+  .main-header ul li:last-child {
+    margin-top: 1.45rem;
+  }
+
+  .alertbar h1 {
+    display: block;
+    font-size: 1.1rem;
+    line-height: normal;
+  }
 }

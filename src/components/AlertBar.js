@@ -1,38 +1,38 @@
-import React from 'react'
-const Airtable = require('airtable-node');
+import React from "react";
+const Airtable = require("airtable-node");
 
 async function fetchAlertMessages(cb) {
-    const airtable = await new Airtable({ apiKey: process.env.REACT_APP_AIRTABLE_API_KEY })
-        .base('appPJGWfywLNUoPkg')
-        .table('alert-messages');
+  const airtable = await new Airtable({
+    apiKey: process.env.REACT_APP_AIRTABLE_API_KEY,
+  })
+    .base("appPJGWfywLNUoPkg")
+    .table("alert-messages");
 
-        const {records} = await airtable.list();
+  const { records } = await airtable.list();
 
-        const messages = records.map((message)=> {
-            return message.fields;
-        });
+  const messages = records.map((message) => {
+    return message.fields;
+  });
 
-        if (cb) {
-            cb(messages);
-        }
-
+  if (cb) {
+    cb(messages);
+  }
 }
 
 function AlertBar() {
-    const [message, setMessage] = React.useState(null);
+  const [message, setMessage] = React.useState(null);
 
-    React.useEffect(()=>{
-        fetchAlertMessages((messages)=>{
-            setMessage(messages[0]);
-        })
-    },[])
+  React.useEffect(() => {
+    fetchAlertMessages((messages) => {
+      setMessage(messages[0]);
+    });
+  }, []);
 
-
-    return (
-        <h1 className='alertbar'>
-            {message && message['alert-message']}
-        </h1>
-    )
+  return (
+    <aside className="alertbar">
+      <h1>{message && message["alert-message"]}</h1>
+    </aside>
+  );
 }
 
-export default AlertBar
+export default AlertBar;
