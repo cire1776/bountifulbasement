@@ -87,7 +87,7 @@ body {
 
 .main-header a:hover,
 .main-header ul li:last-child:hover {
-  color: yellow;
+  color: rgb(224, 212, 37);
 }
 
 #hamburger {
