@@ -1,3 +1,7 @@
 .orderslip-editor ul {
   background: white;
 }
+
+.orderslip-editor {
+  margin-top: 3rem;
+}
