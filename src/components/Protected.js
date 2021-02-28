@@ -2,7 +2,7 @@ import React from "react";
 
 function Protected({ children }) {
   const netlifyIdentity = require("netlify-identity-widget");
-  const [user, setUser] = React.useState(netlifyIdentity.currentUser());
+  const [user, setUser] = React.useState(null);
 
   React.useEffect(() => {}, [user]);
 
@@ -10,6 +10,7 @@ function Protected({ children }) {
     netlifyIdentity.init({});
     netlifyIdentity.on("login", checkinUser);
     netlifyIdentity.on("logout", checkoutUser);
+    setUser(netlifyIdentity.currentUser());
   }, []);
 
   function checkinUser(user) {
