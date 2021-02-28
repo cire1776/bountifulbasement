@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@loadable/server": "^5.14.2",
     "@reach/dialog": "^0.13.2",
     "@reach/tabs": "^0.13.2",
     "@reach/visually-hidden": "^0.13.2",
@@ -58,5 +59,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@loadable/babel-plugin": "^5.13.2",
+    "@loadable/webpack-plugin": "^5.14.2"
   }
 }

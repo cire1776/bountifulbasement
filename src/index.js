@@ -1,20 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import netlifyIdentity from 'netlify-identity-widget';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import netlifyIdentity from "netlify-identity-widget";
 
-window.netlifyIdentity = netlifyIdentity;
-// You must run this once before trying to interact with the widget
-netlifyIdentity.init();
+// window.netlifyIdentity = netlifyIdentity;
+// // You must run this once before trying to interact with the widget
+// netlifyIdentity.init();
 
 ReactDOM.render(
-
-<React.StrictMode>
+  <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  typeof document !== "undefined" ? document.getElementById("root") : null
 );
 
 // If you want to start measuring performance in your app, pass a function
