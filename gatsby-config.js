@@ -8,6 +8,7 @@ module.exports = {
     author: `Eric Russell`,
   },
   plugins: [
+    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {
