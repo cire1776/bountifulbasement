@@ -2,7 +2,7 @@ const Airtable = require("airtable-node");
 
 export async function fetchSlipItems(itemSetter) {
   const airtable = await new Airtable({
-    apiKey: process.env.AIRTABLE_API_KEY,
+    apiKey: process.env.GATSBY_AIRTABLE_API_KEY,
   })
     .base("appPJGWfywLNUoPkg")
     .table("order-slip-data");
@@ -36,7 +36,7 @@ export async function fetchSlipItems(itemSetter) {
 
 export async function fetchEditableItems(setter) {
   const airtable = await new Airtable({
-    apiKey: process.env.AIRTABLE_API_KEY,
+    apiKey: process.env.GATSBY_AIRTABLE_API_KEY,
   })
     .base("appPJGWfywLNUoPkg")
     .table("order-slip-data");
@@ -69,7 +69,7 @@ export function flattenItems(newItems) {
 
 export async function fetchCategories(categoriesSetter) {
   const airtable = await new Airtable({
-    apiKey: process.env.AIRTABLE_API_KEY,
+    apiKey: process.env.GATSBY_AIRTABLE_API_KEY,
   })
     .base("appPJGWfywLNUoPkg")
     .table("order-slip-categories")
@@ -90,7 +90,7 @@ export async function fetchCategories(categoriesSetter) {
 
 export async function createItem(fields, refresher) {
   const airtable = await new Airtable({
-    apiKey: process.env.AIRTABLE_API_KEY,
+    apiKey: process.env.GATSBY_AIRTABLE_API_KEY,
   })
     .base("appPJGWfywLNUoPkg")
     .table("order-slip-data");
@@ -103,7 +103,7 @@ export async function createItem(fields, refresher) {
 
 export async function updateFields(id, fields, refresher) {
   const airtable = await new Airtable({
-    apiKey: process.env.AIRTABLE_API_KEY,
+    apiKey: process.env.GATSBY_AIRTABLE_API_KEY,
   })
     .base("appPJGWfywLNUoPkg")
     .table("order-slip-data");
@@ -116,7 +116,7 @@ export async function updateFields(id, fields, refresher) {
 
 export async function deleteItem(id, refresher) {
   const airtable = await new Airtable({
-    apiKey: process.env.AIRTABLE_API_KEY,
+    apiKey: process.env.GATSBY_AIRTABLE_API_KEY,
   })
     .base("appPJGWfywLNUoPkg")
     .table("order-slip-data");

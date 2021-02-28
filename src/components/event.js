@@ -2,10 +2,11 @@ import { CLOSURE } from "../common";
 
 const Airtable = require("airtable-node");
 
-const apiKey = "keyrXrvJEWWLSjTU2";
 const baseID = "appPJGWfywLNUoPkg";
 
-const airtable = new Airtable({ apiKey }).base(baseID).table("events");
+const airtable = new Airtable({ apiKey: process.env.GATSBY_AIRTABLE_API_KEY })
+  .base(baseID)
+  .table("events");
 
 export const isScheduled = (date, events) => {
   const day = date.getDate();
