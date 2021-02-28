@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.scss";
-import logo from "../assets/bountifulbasementlogo.png";
+import logo from "../images/bountifulbasementlogo.png";
 
 import netlifyIdentity from "netlify-identity-widget";
 import AlertBar from "./AlertBar";

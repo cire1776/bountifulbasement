@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import pencil from "../assets/pencil.svg";
-import trashcan from "../assets/trash.svg";
-import plus from "../assets/plus.svg";
+import pencil from "../images/pencil.svg";
+import trashcan from "../images/trash.svg";
+import plus from "../images/plus.svg";
 import EditableText from "./EditableText";
 import {
   fetchEditableItems,

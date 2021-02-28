@@ -1,17 +1,17 @@
 import React, { useEffect, useState, useRef } from "react";
-import Protected from "../components/Protected";
-import MainHeader from "../components/MainHeader";
-import BBCalendar from "../pages/BBCalendar";
+import Protected from "../../components/Protected";
+import MainHeader from "../../components/MainHeader";
+import BBCalendar from "../../components/BBCalendar";
 import {
   fetchAllEvents,
   addEvent,
   updateEvent,
   deleteEvent,
-} from "../components/event";
-import pencil from "../assets/pencil.svg";
-import trashcan from "../assets/trash.svg";
-import plus from "../assets/plus.svg";
-import "./CalendarEditor.css";
+} from "../../components/event";
+import pencil from "../../images/pencil.svg";
+import trashcan from "../../images/trash.svg";
+import plus from "../../images/plus.svg";
+import "./editor.css";
 
 function CalendarEditor() {
   const [events, setEvents] = useState([]);

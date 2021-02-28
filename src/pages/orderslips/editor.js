@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./OrderSlipEditor.css";
+import "./editor.css";
 import {
   fetchEditableItems,
   fetchSlipItems,
@@ -7,12 +7,12 @@ import {
   createItem,
   updateFields,
   deleteItem,
-} from "../components/order_slip_loader";
+} from "../../components/order_slip_loader";
 
-import Protected from "../components/Protected";
-import MainHeader from "../components/MainHeader";
-import OrderSlip from "../components/OrderSlip";
-import EditableItemList from "../components/EditableItemList";
+import Protected from "../../components/Protected";
+import MainHeader from "../../components/MainHeader";
+import OrderSlip from "../../components/OrderSlip";
+import EditableItemList from "../../components/EditableItemList";
 
 function OrderSlipEditor() {
   const [orderSlipItems, setOrderSlipItems] = useState({});

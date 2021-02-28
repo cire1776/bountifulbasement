@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import OrderSlip from "../components/OrderSlip";
+import OrderSlip from "../../components/OrderSlip";
 import {
   fetchSlipItems,
   fetchCategories,
-} from "../components/order_slip_loader.js";
+} from "../../components/order_slip_loader.js";
 
 function OrderSlipSheet() {
   const [items, setItems] = useState({});
