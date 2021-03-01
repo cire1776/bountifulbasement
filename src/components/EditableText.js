@@ -5,6 +5,7 @@ function EditableText({ id, text, changeProc, endEditingItem }) {
   const originalValue = React.useRef(text);
 
   function handleKey(event) {
+    event.preventDefault();
     if (event.code === "Escape") {
       endEditingItem(originalValue.current);
     } else if (event.code === "Enter" || event.code === "NumpadEnter") {
