@@ -9,7 +9,7 @@ export async function fetchSlipItems(itemSetter) {
 
   const { records } = await airtable.list({
     pageSize: 100, // optional
-    axRecords: 200, // optional
+    maxRecords: 200, // optional
   });
   const newItems = records.reduce((accum, record) => {
     const category = record.fields.category;
