@@ -218,10 +218,9 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
-  top: 48px;
-  bottom: 0;
+  min-height: 5rem;
+  bottom: -2rem;
   width: 100%;
-  min-height: 10rem;
   color: white;
   background-color: darkred;
 }
@@ -324,6 +323,7 @@ body {
     font-size: 1.5rem;
   }
 }
+
 .wrapper {
   position: relative;
   min-height: 100vh;
