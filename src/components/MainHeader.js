@@ -28,10 +28,10 @@ function MainHeader() {
               <a href="/news">What's New</a>
             </li>
             <li>
-              <a href="/community">Community BB</a>
+              <a href="/community">Resources</a>
             </li>
             <li>
-              <a href="/difference">Making a Difference</a>
+              <a href="/difference">Make a Difference</a>
             </li>
             <li>
               <a href="/recipes">Recipes</a>
