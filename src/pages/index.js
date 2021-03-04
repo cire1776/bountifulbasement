@@ -1,14 +1,8 @@
-import React from 'react'
-import MainHeader from '../components/MainHeader'
+import React from "react";
+import Layout from "../components/Layout";
 
 function Home() {
-    return (
-        <>
-            <MainHeader />
-            <main>
-            </main>
-        </>
-    )   
+  return <Layout></Layout>;
 }
 
-export default Home
+export default Home;

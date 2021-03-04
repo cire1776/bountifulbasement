@@ -21,4 +21,5 @@ collections:
       - { label: "Tags", name: "tags", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }
+      - { label: "Featured Image", name: "featured_image", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
