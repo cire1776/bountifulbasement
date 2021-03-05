@@ -28,13 +28,13 @@ function MainHeader() {
               <a href="/news">What's New</a>
             </li>
             <li>
-              <a href="/community">Resources</a>
-            </li>
-            <li>
               <a href="/difference">Make a Difference</a>
             </li>
             <li>
-              <a href="/recipes">Recipes</a>
+              <a href="/recipes">Need Food?</a>
+            </li>
+            <li>
+              <a href="/community">Resources</a>
             </li>
             {netlifyIdentity.currentUser() ? (
               <li onClick={() => netlifyIdentity.logout()}>Logout</li>
