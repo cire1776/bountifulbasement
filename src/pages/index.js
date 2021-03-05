@@ -7,25 +7,25 @@ function Index() {
     <Layout>
       <section className="home">
         <header className="food-insecurity">
-          <figure>
-            <article>
-              <h1>Food In•se•cu•ri•ty</h1>
-              <h2>Noun</h2>
-              <h3>Food Insecurity</h3>
-              <p>
-                The state of being without reliable access to a sufficient
-                quantity of affordable, nutritious food.
-              </p>
-              <h1>Did you know?</h1>
-              <p>
-                Thousands of residents of the West Park/Bellaire-Puritas
-                neighborhood face food insecurity at some point throughout the
-                year?
-              </p>
-            </article>
-          </figure>
+          <figure></figure>
+          <article>
+            <h1>Food In•se•cu•ri•ty</h1>
+            <h2>Noun</h2>
+            <h3>Food Insecurity</h3>
+            <p>
+              The state of being without reliable access to a sufficient
+              quantity of affordable, nutritious food.
+            </p>
+            <h1>Did you know?</h1>
+            <p>
+              Thousands of residents of the West Park/Bellaire-Puritas
+              neighborhood face food insecurity at some point throughout the
+              year?
+            </p>
+          </article>
         </header>
         <section className="bb-intro">
+          <figure></figure>
           <article>
             <p>
               The Bountiful Basement, the Food Ministry of{" "}
@@ -40,7 +40,6 @@ function Index() {
               fresh produce. Families can come once per calendar month.
             </p>
           </article>
-          <figure></figure>
         </section>
       </section>
     </Layout>
