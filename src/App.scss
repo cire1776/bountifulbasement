@@ -154,7 +154,7 @@ body {
     }
 
     article {
-      margin: 1rem 0 3rem 2rem;
+      margin: 1rem 0 2rem 2rem;
       width: calc(100vw - 4rem);
       font-size: 1vw;
 
@@ -219,6 +219,26 @@ body {
   }
 }
 
+.home {
+  .cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #401408;
+    text-align: center;
+    height: 6rem;
+    margin: 0;
+    padding: 0;
+
+    button {
+      font-size: 1.5rem;
+      margin-left: 2rem;
+      background-color: lightskyblue;
+      border-radius: 10px;
+      padding: 0.5rem 0.5rem;
+    }
+  }
+}
 .main-footer {
   display: flex;
   align-items: center;
@@ -308,7 +328,7 @@ body {
       }
 
       article {
-        margin: 2rem;
+        // margin: 2rem;
         min-height: 50%;
         width: 50%;
 

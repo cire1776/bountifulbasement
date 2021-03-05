@@ -24,6 +24,11 @@ function Index() {
             </p>
           </article>
         </header>
+        <section className="cta">
+          <button type="button">Donate</button>
+          <button type="button">Volunteer</button>
+          <button type="button">Need Food?</button>
+        </section>
         <section className="bb-intro">
           <figure></figure>
           <article>
@@ -41,6 +46,11 @@ function Index() {
               fresh produce. Families can come once per calendar month.
             </p>
           </article>
+        </section>
+        <section className="cta">
+          <button type="button">Donate</button>
+          <button type="button">Volunteer</button>
+          <button type="button">Need Food?</button>
         </section>
       </section>
     </Layout>
