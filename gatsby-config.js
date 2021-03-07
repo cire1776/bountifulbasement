@@ -56,5 +56,20 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-source-airtable`,
+      options: {
+        apiKey: process.env.GATSBY_AIRTABLE_API_KEY, // may instead specify via env, see below
+        concurrency: 5, // default, see using markdown and attachments for more information
+        tables: [
+          {
+            baseId: `appN5n5h3z6FsZU59`,
+            tableName: `resources`,
+            separateNodeType: false, // boolean, default is false, see the documentation on naming conflicts for more information
+            separateMapType: false, // boolean, default is false, see the documentation on using markdown and attachments for more information
+          },
+        ],
+      },
+    },
   ],
 };

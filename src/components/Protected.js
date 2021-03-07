@@ -23,7 +23,7 @@ function Protected({ children }) {
 
   if (!user) {
     return (
-      <section>
+      <section className="login">
         <h1>You must be logged in to access this page</h1>
         <button onClick={() => netlifyIdentity.open()}>Login</button>
       </section>
