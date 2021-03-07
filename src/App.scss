@@ -241,14 +241,70 @@ body {
 }
 .main-footer {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
-  min-height: 5rem;
+  height: 15rem;
   bottom: -2rem;
   width: 100%;
   color: white;
   background-color: darkred;
+
+  .main {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+
+    & > a {
+      display: block;
+      position: relative;
+      top: 0.5rem;
+      width: 200px;
+      height: 200px;
+      overflow: hidden;
+      background: url("./images/bountifulbasementlogo.png") no-repeat;
+      background-size: 175% 175%;
+      background-position: center center;
+    }
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      right: 5rem;
+
+      & > a {
+        float: right;
+        font-size: 2rem;
+        text-align: right;
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+
+  section {
+    width: 100%;
+
+    div {
+      h2 {
+        font-size: 1.25rem;
+      }
+      p {
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  h1 {
+    display: inline-block;
+    text-align: center;
+    background-color: #401408;
+    width: 100%;
+    padding: 1rem 0;
+  }
 }
 
 @media screen and (min-width: 280px) {
