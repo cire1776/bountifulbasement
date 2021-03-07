@@ -245,7 +245,7 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
-  height: 15rem;
+  min-height: 15rem;
   bottom: -2rem;
   width: 100%;
   color: white;
@@ -288,7 +288,11 @@ body {
   section {
     width: 100%;
 
-    div {
+    article + article {
+      margin-left: 2rem;
+    }
+
+    article {
       h2 {
         font-size: 1.25rem;
       }
@@ -304,6 +308,28 @@ body {
     background-color: #401408;
     width: 100%;
     padding: 1rem 0;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  footer .main {
+    flex-direction: column;
+
+    & > * {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    nav {
+      // display: none !important;
+      position: static !important;
+      text-align: center !important;
+
+      a {
+        justify-self: center !important;
+        text-align: center !important;
+      }
+    }
   }
 }
 
