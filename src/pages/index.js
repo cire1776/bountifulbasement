@@ -1,5 +1,6 @@
 import React from "react";
 import Layout from "../components/layout";
+import CallToAction from "../components/CallToAction";
 import bbsign from "../assets/bb-sign 2.jpg";
 
 function Index() {
@@ -24,11 +25,7 @@ function Index() {
             </p>
           </article>
         </header>
-        <section className="cta">
-          <button type="button">Donate</button>
-          <button type="button">Volunteer</button>
-          <button type="button">Need Food?</button>
-        </section>
+        <CallToAction />
         <section className="bb-intro">
           <figure></figure>
           <article>
@@ -47,11 +44,7 @@ function Index() {
             </p>
           </article>
         </section>
-        <section className="cta">
-          <button type="button">Donate</button>
-          <button type="button">Volunteer</button>
-          <button type="button">Need Food?</button>
-        </section>
+        <CallToAction />
       </section>
     </Layout>
   );
