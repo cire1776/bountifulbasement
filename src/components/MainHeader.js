@@ -31,7 +31,7 @@ function MainHeader() {
               <a href="/difference">Make a Difference</a>
             </li>
             <li>
-              <a href="/recipes">Need Food?</a>
+              <a href="/need-food">Need Food?</a>
             </li>
             <li>
               <a href="/community">Resources</a>
