@@ -14,7 +14,7 @@ function ResourceCard({
   editor,
   deleter,
 }) {
-  let classes = [];
+  let classes = ["resource-card"];
   if (featured) {
     classes.push("featured");
   }

@@ -9,11 +9,14 @@
   ul {
     list-style: none;
     text-align: left;
+    margin-left: 1rem;
+    margin-right: 1rem;
 
     article {
       background-color: white;
-      margin: 2rem;
+      margin: 2rem auto;
       padding: 2rem;
+      max-width: 500px;
       height: 5rem;
       box-shadow: 10px 10px 5px 5px lightgray;
 
@@ -34,6 +37,7 @@
     ul {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 1rem;
     }
   }
 }
