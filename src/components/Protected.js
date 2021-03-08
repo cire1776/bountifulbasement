@@ -1,4 +1,5 @@
 import React from "react";
+import Layout from "./layout";
 
 function Protected({ children }) {
   const netlifyIdentity = require("netlify-identity-widget");
@@ -21,12 +22,21 @@ function Protected({ children }) {
     setUser(null);
   }
 
+  function loginUser(e) {
+    e.preventDefault();
+    netlifyIdentity.open();
+  }
+
   if (!user) {
     return (
-      <section className="login">
-        <h1>You must be logged in to access this page</h1>
-        <button onClick={() => netlifyIdentity.open()}>Login</button>
-      </section>
+      <Layout>
+        <section className="login">
+          <h1>You must be logged in to access this page</h1>
+          <button type="button" onClick={loginUser}>
+            Login Here
+          </button>
+        </section>
+      </Layout>
     );
   }
 

@@ -148,8 +148,8 @@ function ResourceEditor({ data, location }) {
   }
   console.log(resources);
   return (
-    <Layout>
-      <Protected>
+    <Protected>
+      <Layout>
         <section className="resource-editor">
           <form>
             <label htmlFor="name">Name</label>
@@ -249,8 +249,8 @@ function ResourceEditor({ data, location }) {
               })}
           </ul>
         </section>
-      </Protected>
-    </Layout>
+      </Layout>
+    </Protected>
   );
 }
 
