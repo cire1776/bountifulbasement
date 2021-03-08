@@ -37,7 +37,7 @@ function MainHeader() {
       <AlertBar />
       <header className="main-header">
         <Link to="/">
-          <img className="logo" src={logo} alt="Bountiful Basement" />
+          <figure className="logo" />
         </Link>
         <nav>
           <label htmlFor="hamburger">&#9776;</label>

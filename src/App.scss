@@ -110,12 +110,20 @@ body {
   display: none;
 }
 
-.logo {
+figure.logo {
+  display: block;
   position: relative;
-  left: -4rem;
-  top: 1.5em;
-  height: 25rem;
+  left: 1rem;
+  top: -1rem;
+  width: 180px;
+  height: 180px;
   z-index: 10;
+  background-image: url("./images/bountifulbasementlogo.png");
+  background-size: 190% 190%;
+  background-position: 50% 40%;
+  overflow: visible;
+
+  // outline: 1px solid yellow;
 }
 
 .alertbar {
@@ -362,7 +370,7 @@ body {
     nav ul {
       position: relative;
       top: 0;
-      left: 0;
+      left: 6rem;
       width: 100%;
       display: grid;
       grid-template-columns: repeat(7, 1fr);
