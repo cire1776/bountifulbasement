@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import "../App.scss";
 import logo from "../images/bountifulbasementlogo.png";
 
@@ -10,31 +11,31 @@ function MainHeader() {
     <>
       <AlertBar />
       <header className="main-header">
-        <a href="/">
+        <Link to="/">
           <img className="logo" src={logo} alt="Bountiful Basement" />
-        </a>
+        </Link>
         <nav>
           <label htmlFor="hamburger">&#9776;</label>
           <input type="checkbox" id="hamburger" />
 
           <ul>
             <li>
-              <a href="/about">About Us</a>
+              <Link to="/about">About Us</Link>
             </li>
             <li>
-              <a href="/calendar">Calendar</a>
+              <Link to="/calendar">Calendar</Link>
             </li>
             <li>
-              <a href="/news">What's New</a>
+              <Link to="/news">What's New</Link>
             </li>
             <li>
-              <a href="/difference">Make a Difference</a>
+              <Link to="/difference">Make a Difference</Link>
             </li>
             <li>
-              <a href="/need-food">Need Food?</a>
+              <Link to="/need-food">Need Food?</Link>
             </li>
             <li>
-              <a href="/community">Resources</a>
+              <Link to="/community">Resources</Link>
             </li>
             {netlifyIdentity.currentUser() ? (
               <li onClick={() => netlifyIdentity.logout()}>Logout</li>
