@@ -11,7 +11,7 @@ import {
 import pencil from "../../images/pencil.svg";
 import trashcan from "../../images/trash.svg";
 import plus from "../../images/plus.svg";
-import "./editor.css";
+import "./editor.scss";
 
 function CalendarEditor() {
   const [events, setEvents] = useState([]);
