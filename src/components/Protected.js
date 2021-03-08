@@ -33,7 +33,7 @@ function Protected({ children }) {
         <section className="login">
           <h1>You must be logged in to access this page</h1>
           <button type="button" onClick={loginUser}>
-            Login Here
+            Login
           </button>
         </section>
       </Layout>
