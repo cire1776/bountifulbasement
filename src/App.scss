@@ -292,6 +292,10 @@ figure.logo {
         color: white;
         text-decoration: none;
       }
+
+      & > a:hover {
+        color: rgb(224, 212, 37);
+      }
     }
   }
 
