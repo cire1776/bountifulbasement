@@ -1,6 +1,33 @@
 import React from "react";
 import pencil from "../images/pencil.svg";
 import trashcan from "../images/trash.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faQuestion,
+  faHandsHelping,
+  faBolt,
+  faHome,
+  faPrayingHands,
+  faUsers,
+  faGraduationCap,
+  faGavel,
+  faUserMd,
+  faAppleAlt,
+  faUtensils,
+} from "@fortawesome/free-solid-svg-icons";
+
+const ICONS = {
+  Assistance: faHandsHelping,
+  Community: faUsers,
+  Utilities: faBolt,
+  Education: faGraduationCap,
+  Food: faAppleAlt,
+  Housing: faHome,
+  Legal: faGavel,
+  Meal: faUtensils,
+  Medical: faUserMd,
+  Prayer: faPrayingHands,
+};
 
 function ResourceCard({
   id,
@@ -28,7 +55,11 @@ function ResourceCard({
       <h1>{name}</h1>
       {phone} |{" "}
       {website !== "n/a" ? <a href={website}>Website</a> : "No Website"}
-      <p>{tags.join(", ")}</p>
+      <div className="icon-group">
+        {tags.map((tag) => {
+          return <FontAwesomeIcon icon={ICONS[tag] || faQuestion} size="2x" />;
+        })}
+      </div>
       {forEditor && (
         <div className="control-group">
           <img src={pencil} alt="edit" onClick={(event) => editor(id)} />

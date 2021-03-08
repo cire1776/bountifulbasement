@@ -24,6 +24,15 @@
         background-color: lightblue;
       }
 
+      .icon-group {
+        display: flex;
+        margin-top: 0.5rem;
+      }
+
+      svg + svg {
+        margin-left: 1rem;
+      }
+
       h1 {
         font-weight: 700;
         margin-bottom: 1rem;
