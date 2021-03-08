@@ -15,7 +15,7 @@ function MainFooter() {
         <article>
           <h2>Food Operations</h2>
           <p>Tuesday: 9:30-12:00</p>
-          <p>Wednesday: 5:30-6:45</p>
+          <p>Wednesday: 5:00-6:45</p>
           <p>Thursday: Closed</p>
         </article>
         <nav>
