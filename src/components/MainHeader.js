@@ -8,6 +8,7 @@ import AlertBar from "./AlertBar";
 
 function MainHeader() {
   const [user, setUser] = React.useState(null);
+  const checkbox = React.useRef(null);
 
   React.useEffect(() => {
     netlifyIdentity.init();
@@ -18,10 +19,12 @@ function MainHeader() {
 
   function logout() {
     netlifyIdentity.logout();
+    closeNavBar();
   }
 
   function login() {
     netlifyIdentity.open();
+    closeNavBar();
   }
 
   function checkinUser(user) {
@@ -30,6 +33,10 @@ function MainHeader() {
 
   function checkoutUser() {
     setUser(null);
+  }
+
+  function closeNavBar() {
+    checkbox.current.checked = false;
   }
 
   return (
@@ -41,7 +48,7 @@ function MainHeader() {
         </Link>
         <nav>
           <label htmlFor="hamburger">&#9776;</label>
-          <input type="checkbox" id="hamburger" />
+          <input type="checkbox" id="hamburger" ref={checkbox} />
 
           <ul>
             <li>
