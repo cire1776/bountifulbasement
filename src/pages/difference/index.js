@@ -33,7 +33,7 @@ function Difference() {
           <FontAwesomeIcon icon={faClock} size="4x" />
           <h1>Give Your Time</h1>
           <p>
-            Your ime is one of our most precious gifts. Join our energetic, fun
+            Your time is one of our most precious gifts. Join our energetic, fun
             crew and experience the joy of serving our most needy families.
           </p>
         </article>
