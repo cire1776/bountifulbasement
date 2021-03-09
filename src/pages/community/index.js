@@ -2,6 +2,19 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../../components/layout";
 import ResourceCard from "../../components/ResourceCard";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHandsHelping, // assistance
+  faUsers, // community
+  faGraduationCap, // education
+  faAppleAlt, // food
+  faHome, // housing
+  faGavel, // legal
+  faUtensils, // meals
+  faUserMd, // medical
+  faPrayingHands, // prayer
+  faBolt, // utilities
+} from "@fortawesome/free-solid-svg-icons";
 import "./community.scss";
 
 function Index({ data, location }) {
@@ -16,6 +29,38 @@ function Index({ data, location }) {
   return (
     <Layout>
       <section className="resources">
+        <ul className="legend">
+          <li>
+            <FontAwesomeIcon icon={faHandsHelping} size="1x" /> - Assistance
+          </li>
+          <li>
+            <FontAwesomeIcon icon={faUsers} size="1x" /> - Community
+          </li>
+          <li>
+            <FontAwesomeIcon icon={faGraduationCap} size="1x" /> - Education
+          </li>
+          <li>
+            <FontAwesomeIcon icon={faAppleAlt} size="1x" /> - Food
+          </li>
+          <li>
+            <FontAwesomeIcon icon={faHome} size="1x" /> - Housing
+          </li>
+          <li>
+            <FontAwesomeIcon icon={faGavel} size="1x" /> - Legal
+          </li>
+          <li>
+            <FontAwesomeIcon icon={faUtensils} size="1x" /> - Meals
+          </li>
+          <li>
+            <FontAwesomeIcon icon={faUserMd} size="1x" /> - Medical
+          </li>
+          <li>
+            <FontAwesomeIcon icon={faPrayingHands} size="1x" /> - Prayer
+          </li>
+          <li>
+            <FontAwesomeIcon icon={faBolt} size="1x" /> - Utilities
+          </li>
+        </ul>
         {featured_resources.length !== 0 && (
           <h1>Special Community Resources</h1>
         )}
