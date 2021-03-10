@@ -1,0 +1,77 @@
+.need-food {
+  margin-top: 3rem;
+
+  header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 75vh;
+    background-image: url("../../assets/pexels-photo-1002778.jpeg");
+    background-size: cover;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  h1 {
+    font-size: 2rem;
+    color: black;
+  }
+
+  h2 {
+    margin-top: 2rem;
+    margin-bottom: 0rem;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+  }
+
+  .policies {
+    background-color: white;
+    min-height: 75vh;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+
+    .column {
+      margin: 1rem;
+
+      article {
+        width: 100%;
+        margin: 1rem;
+      }
+
+      ul li {
+        margin-left: 2rem;
+      }
+    }
+
+    h1 {
+      color: orange;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-top: 0.5rem;
+    }
+  }
+
+  figure {
+    background: url("../../assets/bb-sign\ 2.jpg");
+    background-size: cover;
+    min-height: 75vh;
+  }
+}
