@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import Layout from "../../components/layout";
 import CallToAction from "../../components/CallToAction";
 import "./difference.scss";
@@ -13,16 +14,20 @@ function Difference() {
     <Layout>
       <section className="difference">
         <article>
-          <FontAwesomeIcon icon={faAppleAlt} size="4x" />
-          <h1>Give Food</h1>
+          <Link to="#host-a-food-drive">
+            <FontAwesomeIcon icon={faAppleAlt} size="4x" />
+            <h1>Give Food</h1>
+          </Link>{" "}
           <p>
             Host a food drive or shop for food you enjoy to share with others in
             the neighborhood.
           </p>
         </article>
         <article>
-          <FontAwesomeIcon icon={faHandHoldingUsd} size="4x" />
-          <h1>Give Money</h1>
+          <Link to="#give-money">
+            <FontAwesomeIcon icon={faHandHoldingUsd} size="4x" />
+            <h1>Give Money</h1>
+          </Link>{" "}
           <p>
             Thanks to our partnership with the Greater Cleveland Food Bank, we
             can purchase food for pennies on the dollar compared to retail
@@ -30,8 +35,10 @@ function Difference() {
           </p>
         </article>
         <article>
-          <FontAwesomeIcon icon={faClock} size="4x" />
-          <h1>Give Your Time</h1>
+          <Link to="#volunteer">
+            <FontAwesomeIcon icon={faClock} size="4x" />
+            <h1>Give Your Time</h1>
+          </Link>{" "}
           <p>
             Your time is one of our most precious gifts. Join our energetic, fun
             crew and experience the joy of serving our most needy families.
@@ -39,9 +46,11 @@ function Difference() {
         </article>
       </section>
       <CallToAction />
+      <a id="host-a-food-drive" />
       <section className="host-a-food-drive">
         <figure />
         <article>
+          <FontAwesomeIcon icon={faAppleAlt} size="4x" />
           <h1>Host a Food Drive</h1>
           <p>
             Hosting a drive is a great way to partner with the Bountiful
@@ -55,9 +64,11 @@ function Difference() {
         </article>
       </section>
       <CallToAction />
+      <a id="give-money" />{" "}
       <section className="give-money">
         <figure />
         <article>
+          <FontAwesomeIcon icon={faHandHoldingUsd} size="4x" />
           <h1>Give Money</h1>
           <p>
             Partnering with the Greater Cleveland Food Bank allows us to extend
@@ -68,9 +79,11 @@ function Difference() {
         </article>
       </section>
       <CallToAction />
+      <a id="volunteer" />{" "}
       <section className="volunteer">
         <figure />
         <article>
+          <FontAwesomeIcon icon={faClock} size="4x" />
           <h1>Give Your Time</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quo

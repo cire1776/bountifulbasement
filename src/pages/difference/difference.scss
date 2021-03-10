@@ -25,12 +25,17 @@
     width: 250px;
     z-index: 1;
 
+    a {
+      text-align: center;
+    }
+
     svg {
-      margin-top: 2rem;
+      margin: 2rem auto 0 auto;
       color: limegreen;
     }
 
     h1 {
+      text-align: center;
       margin-top: 2rem;
       margin-bottom: 1rem;
     }
@@ -77,6 +82,12 @@
   article {
     padding: 2rem;
     margin-top: 0;
+
+    svg {
+      display: block;
+      color: limegreen;
+      margin: 0 auto;
+    }
   }
 
   figure {
@@ -89,6 +100,7 @@
   }
 
   h1 {
+    text-align: center;
     font-size: 2rem;
     margin-top: 2rem;
     margin-bottom: 1rem;
@@ -141,6 +153,12 @@
     padding: 2rem;
     margin-top: 0;
     margin-right: 2rem;
+
+    svg {
+      display: block;
+      color: limegreen;
+      margin: 0 auto;
+    }
   }
 
   figure {
@@ -154,6 +172,7 @@
   }
 
   h1 {
+    text-align: center;
     font-size: 2rem;
     margin-top: 2rem;
     margin-bottom: 1rem;
@@ -206,6 +225,12 @@
     padding: 2rem;
     margin-top: 0;
     margin-right: 2rem;
+
+    svg {
+      display: block;
+      color: limegreen;
+      margin: 0 auto;
+    }
   }
 
   figure {
@@ -219,6 +244,7 @@
   }
 
   h1 {
+    text-align: center;
     font-size: 2rem;
     margin-top: 2rem;
     margin-bottom: 1rem;
