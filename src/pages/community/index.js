@@ -13,6 +13,7 @@ import {
   faUtensils, // meals
   faUserMd, // medical
   faPrayingHands, // prayer
+  faBalanceScale,
   faBolt, // utilities
 } from "@fortawesome/free-solid-svg-icons";
 import "./community.scss";
@@ -57,6 +58,9 @@ function Index({ data, location }) {
           <li>
             <FontAwesomeIcon icon={faPrayingHands} size="1x" /> - Prayer
           </li>
+          <li>
+            <FontAwesomeIcon icon={faBalanceScale} size="1x" /> - Tenant Rights
+          </li>{" "}
           <li>
             <FontAwesomeIcon icon={faBolt} size="1x" /> - Utilities
           </li>

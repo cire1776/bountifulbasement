@@ -13,6 +13,7 @@ import {
   faGavel,
   faUserMd,
   faAppleAlt,
+  faBalanceScale,
   faUtensils,
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -26,6 +27,7 @@ const ICONS = {
   Legal: faGavel,
   Meal: faUtensils,
   Medical: faUserMd,
+  Rights: faBalanceScale,
   Prayer: faPrayingHands,
 };
 
