@@ -28,7 +28,7 @@ body {
 
   nav ul {
     // margin-top: 5rem;
-    overflow: hidden;
+    overflow-x: scroll;
   }
 
   nav ul a {
@@ -84,7 +84,7 @@ body {
   top: -5rem;
   width: 250px;
   background-color: #222222;
-  height: 200vh;
+  height: 100vh;
   margin-top: 5rem;
   z-index: 100;
   text-align: center;
@@ -332,6 +332,7 @@ figure.logo {
       flex-direction: column;
       position: absolute;
       right: 5rem;
+      overflow-y: scroll;
 
       & > a {
         float: right;
