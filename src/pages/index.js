@@ -31,8 +31,8 @@ function Index() {
             <figure></figure>
             <article>
               <p>
-                For over 20 years, the <i>Bountiful Basement</i>, the Food
-                Ministry of{" "}
+                For over 20 years, the <i>Bountiful Basement</i>, one of the
+                Food Ministries of{" "}
                 <a href="http://blessedtrinitycleveland.org">
                   Blessed Trinity Parish
                 </a>
