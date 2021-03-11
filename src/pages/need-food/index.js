@@ -62,7 +62,7 @@ function NeedFood() {
                   <li>If you are in a vehicle, please stay in your car.</li>
                   <li>
                     Mask wearing and social distancing are strictly enforced.
-                    Physical contact, including fist- or elbow-bumping are not
+                    Physical contact, including fist- or elbow-bumping, is not
                     allowed.
                   </li>
                 </ul>
