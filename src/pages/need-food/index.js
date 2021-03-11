@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "../../components/layout";
 import { Link } from "gatsby";
+import eligibility from "../../assets/eligibility-guidelines.pdf";
 import "./need-food.scss";
 
 function NeedFood() {
@@ -27,7 +28,7 @@ function NeedFood() {
               </p>
               <p>
                 You must also meet the federal income requirements defined{" "}
-                <Link to="income-guidelines">here</Link>.
+                <a href={eligibility}>here</a>.
               </p>
             </article>
             <article>
