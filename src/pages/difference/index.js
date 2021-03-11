@@ -95,7 +95,6 @@ function Difference() {
           </p>
         </article>
       </section>
-      <CallToAction />
     </Layout>
   );
 }
