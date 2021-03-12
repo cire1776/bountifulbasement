@@ -19,8 +19,8 @@ function MainFooter() {
           <p>Thursday: Closed</p>
         </article>
         <nav>
-          <a href="/donate">Donate</a>
-          <a href="/volunteer">Volunteer</a>
+          <a href="/difference/donate">Donate</a>
+          <a href="/difference/volunteer">Volunteer</a>
           <a href="/need-food">Need Food?</a>
         </nav>
       </section>
