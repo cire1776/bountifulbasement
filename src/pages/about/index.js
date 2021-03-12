@@ -7,9 +7,28 @@ function AboutUs() {
     <Layout classname="about">
       <article>
         <h1>Mission Statement</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione ex
+          magnam quos sed ipsum voluptate, expedita itaque, inventore
+          dignissimos, eum id architecto repellendus. Veritatis, velit.
+        </p>
       </article>
       <article>
         <h1>History</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores
+          tempora tempore sed quia sunt laudantium itaque vitae architecto
+          corporis tenetur modi perferendis, impedit voluptatem quo. Recusandae
+          aliquid vero modi voluptatibus deserunt rem culpa distinctio labore
+          minus sed, laborum, quaerat iusto, consectetur ratione! Dignissimos,
+          blanditiis vel enim, quidem in numquam, labore ad rem velit repellat
+          harum. Esse nam pariatur sint doloribus repellendus blanditiis impedit
+          tempore itaque in labore laboriosam a ipsum maxime sapiente facere
+          quam incidunt cumque odio consequuntur vel numquam vero, aspernatur
+          aliquid voluptatibus! Eius, dolor, quod voluptatum minima earum,
+          incidunt voluptas veniam possimus sed quae quidem consequatur! Natus,
+          eaque.
+        </p>
       </article>
       <article>
         <h1>Partners</h1>
@@ -22,10 +41,10 @@ function AboutUs() {
           Generously,{" "}
           <a href="http://blessedtrinitycleveland.org">Blessed Trinity</a>{" "}
           provides our building, freezer space and pays for all of the
-          electricity that we use.  This allows us to spend more of our precious resources on food.</p>
-          <p>Many, if not most, of our volunteers are
-          members of the parish.
+          electricity that we use. This allows us to spend more of our precious
+          resources on food.
         </p>
+        <p>Many, if not most, of our volunteers are members of the parish.</p>
         <h2>Hunger Network of Cleveland</h2>
         <h3>"No one goes hungry. No food goes to waste."</h3>
         <p>
