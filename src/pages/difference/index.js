@@ -72,10 +72,13 @@ function Difference() {
           <h1>Give Money</h1>
           <p>
             Partnering with the Greater Cleveland Food Bank allows us to extend
-            our buying power and acqquire much of our food for pennies on the
+            our buying power and acquire much of our food for pennies on the
             dollar compared to traditional retail stores. In addition, we have
             monthly food transportation expenses that we must cover.
           </p>
+          <h2>
+            <Link to="/difference/donate">Read More</Link>{" "}
+          </h2>
         </article>
       </section>
       <CallToAction />
@@ -86,13 +89,14 @@ function Difference() {
           <FontAwesomeIcon icon={faClock} size="4x" />
           <h1>Give Your Time</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quo
-            a sunt laborum inventore necessitatibus atque debitis vel, quam
-            ducimus, magni sapiente asperiores. Quibusdam, alias, accusantium
-            animi quidem at eaque soluta corporis praesentium dolores aspernatur
-            eius ratione libero et est maxime quis minus quam provident fugiat
-            sapiente. Esse, reiciendis necessitatibus!
+            Our volunteers are the heart and soul of the Bountiful Basement.
+            Without them, not one bag of food would reach the families that need
+            it.{" "}
           </p>
+          <h2>
+            {" "}
+            <Link to="/difference/volunteer/">Read More</Link>
+          </h2>
         </article>
       </section>
     </Layout>

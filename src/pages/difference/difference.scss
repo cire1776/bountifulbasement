@@ -96,7 +96,6 @@
     background-size: cover;
     min-height: 100%;
     min-width: 50%;
-    outline: 1px solid limegreen;
   }
 
   h1 {
@@ -110,7 +109,6 @@
 @media screen and (max-width: 768px) {
   .host-a-food-drive {
     article {
-      // margin-top: -3.5rem;
       margin-right: 2rem;
     }
   }
@@ -177,6 +175,16 @@
     margin-top: 2rem;
     margin-bottom: 1rem;
   }
+  h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+
+    &:hover {
+      color: limegreen;
+      cursor: pointer;
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -222,9 +230,8 @@
   min-height: 50vh;
 
   article {
-    padding: 2rem;
+    padding-right: 2rem;
     margin-top: 0;
-    margin-right: 2rem;
 
     svg {
       display: block;
@@ -249,12 +256,22 @@
     margin-top: 2rem;
     margin-bottom: 1rem;
   }
+
+  h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+
+    &:hover {
+      color: limegreen;
+      cursor: pointer;
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
   .volunteer {
     article {
-      // margin-top: -3.5rem;
       margin-right: 2rem;
     }
   }
@@ -275,11 +292,83 @@
     article {
       margin: 2rem 2rem 2rem 0.75rem;
       padding: 0;
-      // outline: 1px solid red;
 
       h1 {
         margin-top: 0;
       }
+    }
+  }
+}
+
+.main-volunteer {
+  margin-top: 3rem;
+  background-color: white;
+
+  header {
+    background-image: url("../../assets/pexels-photo-853168.jpeg.jpg");
+    background-size: cover;
+    background-color: lightblue;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      font-size: 4rem;
+      color: white;
+    }
+  }
+  article {
+    margin: 2rem auto;
+    max-width: 750px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    p {
+      font-size: 1.5rem;
+    }
+
+    p + p {
+      margin-top: 1rem;
+    }
+    dl {
+      line-height: 2rem;
+      font-size: 1.5rem;
+
+      h1 {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-size: 2rem;
+        font-weight: 700;
+        color: darkred;
+      }
+
+      h2 {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+        font-style: italic;
+
+        span {
+          text-decoration: line-through;
+        }
+      }
+    }
+    dt {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    dd {
+      margin: 0;
+      padding: 0 0 0.5em 0;
+    }
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .main-volunteer header {
+    h1 {
+      font-size: 10vw;
     }
   }
 }
