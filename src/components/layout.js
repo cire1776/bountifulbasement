@@ -3,11 +3,11 @@ import { Link } from "gatsby";
 import MainHeader from "./MainHeader";
 import MainFooter from "./MainFooter";
 
-const Layout = ({ children }) => {
+const Layout = ({ classname, children }) => {
   return (
     <div className="wrapper">
       <MainHeader />
-      <main>{children}</main>
+      <main className={classname}>{children}</main>
       <MainFooter />
     </div>
   );
