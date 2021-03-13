@@ -3,7 +3,7 @@ import Layout from "../../components/layout";
 
 function Volunteer() {
   return (
-    <Layout classname="main-volunteer">
+    <Layout classname="main-volunteer" title="Volunteers">
       <header>
         <h1>Our Volunteers</h1>
       </header>

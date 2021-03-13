@@ -149,7 +149,7 @@ function ResourceEditor({ data, location }) {
   console.log(resources);
   return (
     <Protected>
-      <Layout>
+      <Layout title="Resource Editor">
         <section className="resource-editor">
           <form>
             <label htmlFor="name">Name</label>

@@ -28,7 +28,7 @@ function Index({ data, location }) {
   );
 
   return (
-    <Layout>
+    <Layout title="Resources">
       <section className="resources">
         <ul className="legend">
           <li>

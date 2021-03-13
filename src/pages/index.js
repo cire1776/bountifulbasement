@@ -6,7 +6,7 @@ import bbsign from "../assets/bb-sign 2.jpg";
 function Index() {
   return (
     <section className="home">
-      <Layout>
+      <Layout title="Main">
         <section className="home">
           <header className="food-insecurity">
             <figure></figure>

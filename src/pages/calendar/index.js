@@ -4,7 +4,7 @@ import Layout from "../../components/layout";
 
 function Index() {
   return (
-    <Layout>
+    <Layout title="Calender">
       <BBCalendar />;
     </Layout>
   );

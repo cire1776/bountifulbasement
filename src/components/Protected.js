@@ -29,7 +29,7 @@ function Protected({ children }) {
 
   if (!user) {
     return (
-      <Layout>
+      <Layout title="Login Warning">
         <section className="login">
           <h1>You must be logged in to access this page</h1>
           <button type="button" onClick={loginUser}>

@@ -6,7 +6,7 @@ import "./need-food.scss";
 
 function NeedFood() {
   return (
-    <Layout>
+    <Layout title="Need Food">
       <section className="need-food">
         <header>
           <h1>Food Distribution Hours</h1>

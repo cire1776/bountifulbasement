@@ -4,7 +4,7 @@ import "./about.scss";
 
 function AboutUs() {
   return (
-    <Layout classname="about">
+    <Layout classname="about" title="About">
       <article>
         <h1>Mission Statement</h1>
         <p>

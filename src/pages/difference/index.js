@@ -11,7 +11,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 function Difference() {
   return (
-    <Layout>
+    <Layout title="Make a Difference">
       <section className="difference">
         <article>
           <Link to="#host-a-food-drive">
