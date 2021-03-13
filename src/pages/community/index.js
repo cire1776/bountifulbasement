@@ -63,67 +63,67 @@ function Index({ data, location }) {
         </header>
         <ul className="legend">
           <li
-            className={isSelected("Assistance") && "selected"}
+            className={isSelected("Assistance") ? "selected" : undefined}
             onClick={() => toggleFilter("Assistance")}
           >
             <FontAwesomeIcon icon={faHandsHelping} size="1x" /> - Assistance
           </li>
           <li
-            className={isSelected("Community") && "selected"}
+            className={isSelected("Community") ? "selected" : undefined}
             onClick={() => toggleFilter("Community")}
           >
             <FontAwesomeIcon icon={faUsers} size="1x" /> - Community
           </li>
           <li
-            className={isSelected("Education") && "selected"}
+            className={isSelected("Education") ? "selected" : undefined}
             onClick={() => toggleFilter("Education")}
           >
             <FontAwesomeIcon icon={faGraduationCap} size="1x" /> - Education
           </li>
           <li
-            className={isSelected("Food") && "selected"}
+            className={isSelected("Food") ? "selected" : undefined}
             onClick={() => toggleFilter("Food")}
           >
             <FontAwesomeIcon icon={faAppleAlt} size="1x" /> - Food
           </li>
           <li
-            className={isSelected("Housing") && "selected"}
+            className={isSelected("Housing") ? "selected" : undefined}
             onClick={() => toggleFilter("Housing")}
           >
             <FontAwesomeIcon icon={faHome} size="1x" /> - Housing
           </li>
           <li
-            className={isSelected("Legal") && "selected"}
+            className={isSelected("Legal") ? "selected" : undefined}
             onClick={() => toggleFilter("Legal")}
           >
             <FontAwesomeIcon icon={faGavel} size="1x" /> - Legal
           </li>
           <li
-            className={isSelected("Meals") && "selected"}
+            className={isSelected("Meals") ? "selected" : undefined}
             onClick={() => toggleFilter("Meals")}
           >
             <FontAwesomeIcon icon={faUtensils} size="1x" /> - Meals
           </li>
           <li
-            className={isSelected("Medical") && "selected"}
+            className={isSelected("Medical") ? "selected" : undefined}
             onClick={() => toggleFilter("Medical")}
           >
             <FontAwesomeIcon icon={faUserMd} size="1x" /> - Medical
           </li>
           <li
-            className={isSelected("Prayer") && "selected"}
+            className={isSelected("Prayer") ? "selected" : undefined}
             onClick={() => toggleFilter("Prayer")}
           >
             <FontAwesomeIcon icon={faPrayingHands} size="1x" /> - Prayer
           </li>
           <li
-            className={isSelected("Rights") && "selected"}
+            className={isSelected("Rights") ? "selected" : undefined}
             onClick={() => toggleFilter("Rights")}
           >
             <FontAwesomeIcon icon={faBalanceScale} size="1x" /> - Tenant Rights
           </li>{" "}
           <li
-            className={isSelected("Utilities") && "selected"}
+            className={isSelected("Utilities") ? "selected" : undefined}
             onClick={() => toggleFilter("Utilities")}
           >
             <FontAwesomeIcon icon={faBolt} size="1x" /> - Utilities
@@ -137,6 +137,7 @@ function Index({ data, location }) {
         )}
         <ul>
           {featured_resources.map((resource) => {
+            console.log(resource);
             return (
               <li key={resource.id || resource.data.Name}>
                 <ResourceCard
@@ -177,6 +178,7 @@ export const pageQuery = graphql`
   query {
     allAirtable {
       nodes {
+        id
         data {
           Name
           website
