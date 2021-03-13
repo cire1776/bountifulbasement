@@ -16,6 +16,11 @@ body {
   height: 100%;
 }
 
+.wrapper {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 .main-header {
   position: relative;
   top: 3rem;
@@ -369,24 +374,23 @@ figure.logo {
   }
 }
 
-.home .main-footer {
-  top: 2rem;
-}
-
 .main-footer {
   width: 100%;
   max-width: 100%;
-}
-.base-footer {
-  width: 100%;
+  outline: 1px solid green;
 
-  h1 {
-    display: block;
-    text-align: center;
-    background-color: #401408;
+  .base-footer {
     width: 100%;
-    // max-width: 100%;
-    padding: 1rem 0;
+    max-width: 100%;
+
+    h1 {
+      display: block;
+      text-align: center;
+      background-color: #401408;
+      width: 100%;
+      // max-width: 100%;
+      padding: 1rem 0;
+    }
   }
 }
 
