@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { graphql } from "gatsby";
 import Layout from "../../components/layout";
 import ResourceCard from "../../components/ResourceCard";
@@ -19,52 +19,119 @@ import {
 import "./community.scss";
 
 function Index({ data, location }) {
+  function filterResources(resource) {
+    const result = resource.data.tags.some((tag) => filter.includes(tag));
+    return result;
+  }
+
+  function toggleFilter(tag) {
+    var index = filter.indexOf(tag);
+
+    if (index === -1) {
+      filter.push(tag);
+    } else {
+      filter.splice(index, 1);
+    }
+
+    setFilter([...filter]);
+    console.log(filter);
+  }
+
+  function isSelected(tag) {
+    return filter.includes(tag);
+  }
+
+  const [filter, setFilter] = useState([]);
   const resources = data.allAirtable.nodes;
-  const featured_resources = resources.filter(
+  let featured_resources = resources.filter(
     (resource) => resource.data.featured
   );
-  const other_resources = resources.filter(
-    (resource) => !resource.data.featured
-  );
+  let other_resources = resources.filter((resource) => !resource.data.featured);
+
+  if (filter.length !== 0) {
+    featured_resources = featured_resources.filter(filterResources);
+    other_resources = other_resources.filter(filterResources);
+  }
+
+  React.useEffect(() => {}, [filter]);
 
   return (
     <Layout title="Resources">
       <section className="resources">
+        <header>
+          <h1>Click Resource Type to Filter</h1>
+        </header>
         <ul className="legend">
-          <li>
+          <li
+            className={isSelected("Assistance") && "selected"}
+            onClick={() => toggleFilter("Assistance")}
+          >
             <FontAwesomeIcon icon={faHandsHelping} size="1x" /> - Assistance
           </li>
-          <li>
+          <li
+            className={isSelected("Community") && "selected"}
+            onClick={() => toggleFilter("Community")}
+          >
             <FontAwesomeIcon icon={faUsers} size="1x" /> - Community
           </li>
-          <li>
+          <li
+            className={isSelected("Education") && "selected"}
+            onClick={() => toggleFilter("Education")}
+          >
             <FontAwesomeIcon icon={faGraduationCap} size="1x" /> - Education
           </li>
-          <li>
+          <li
+            className={isSelected("Food") && "selected"}
+            onClick={() => toggleFilter("Food")}
+          >
             <FontAwesomeIcon icon={faAppleAlt} size="1x" /> - Food
           </li>
-          <li>
+          <li
+            className={isSelected("Housing") && "selected"}
+            onClick={() => toggleFilter("Housing")}
+          >
             <FontAwesomeIcon icon={faHome} size="1x" /> - Housing
           </li>
-          <li>
+          <li
+            className={isSelected("Legal") && "selected"}
+            onClick={() => toggleFilter("Legal")}
+          >
             <FontAwesomeIcon icon={faGavel} size="1x" /> - Legal
           </li>
-          <li>
+          <li
+            className={isSelected("Meals") && "selected"}
+            onClick={() => toggleFilter("Meals")}
+          >
             <FontAwesomeIcon icon={faUtensils} size="1x" /> - Meals
           </li>
-          <li>
+          <li
+            className={isSelected("Medical") && "selected"}
+            onClick={() => toggleFilter("Medical")}
+          >
             <FontAwesomeIcon icon={faUserMd} size="1x" /> - Medical
           </li>
-          <li>
+          <li
+            className={isSelected("Prayer") && "selected"}
+            onClick={() => toggleFilter("Prayer")}
+          >
             <FontAwesomeIcon icon={faPrayingHands} size="1x" /> - Prayer
           </li>
-          <li>
+          <li
+            className={isSelected("Rights") && "selected"}
+            onClick={() => toggleFilter("Rights")}
+          >
             <FontAwesomeIcon icon={faBalanceScale} size="1x" /> - Tenant Rights
           </li>{" "}
-          <li>
+          <li
+            className={isSelected("Utilities") && "selected"}
+            onClick={() => toggleFilter("Utilities")}
+          >
             <FontAwesomeIcon icon={faBolt} size="1x" /> - Utilities
           </li>
         </ul>
+        <footer>
+          <h1 onClick={() => setFilter([])}>Clear</h1>
+        </footer>
         {featured_resources.length !== 0 && (
           <h1>Special Community Resources</h1>
         )}
