@@ -41,41 +41,43 @@ function MainHeader() {
 
   return (
     <>
-      <AlertBar />
-      <header className="main-header">
-        <Link to="/">
-          <figure className="logo" />
-        </Link>
-        <nav>
-          <label htmlFor="hamburger">&#9776;</label>
-          <input type="checkbox" id="hamburger" ref={checkbox} />
+      <header className="outer-header">
+        <AlertBar />
+        <section className="main-header">
+          <Link to="/">
+            <figure className="logo" />
+          </Link>
+          <nav>
+            <label htmlFor="hamburger">&#9776;</label>
+            <input type="checkbox" id="hamburger" ref={checkbox} />
 
-          <ul>
-            <li>
-              <Link to="/about">About Us</Link>
-            </li>
-            <li>
-              <Link to="/calendar">Calendar</Link>
-            </li>
-            <li>
-              <Link to="/news">What's New</Link>
-            </li>
-            <li>
-              <Link to="/difference">Make a Difference</Link>
-            </li>
-            <li>
-              <Link to="/need-food">Need Food?</Link>
-            </li>
-            <li>
-              <Link to="/community">Resources</Link>
-            </li>
-            {user ? (
-              <li onClick={logout}>Logout</li>
-            ) : (
-              <li onClick={login}>Login</li>
-            )}
-          </ul>
-        </nav>
+            <ul>
+              <li>
+                <Link to="/about">About Us</Link>
+              </li>
+              <li>
+                <Link to="/calendar">Calendar</Link>
+              </li>
+              <li>
+                <Link to="/news">What's New</Link>
+              </li>
+              <li>
+                <Link to="/difference">Make a Difference</Link>
+              </li>
+              <li>
+                <Link to="/need-food">Need Food?</Link>
+              </li>
+              <li>
+                <Link to="/community">Resources</Link>
+              </li>
+              {user ? (
+                <li onClick={logout}>Logout</li>
+              ) : (
+                <li onClick={login}>Login</li>
+              )}
+            </ul>
+          </nav>
+        </section>
       </header>
     </>
   );

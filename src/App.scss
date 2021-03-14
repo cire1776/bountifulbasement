@@ -21,6 +21,14 @@ body {
   overflow-x: hidden;
 }
 
+.outer-header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: rgb(231, 226, 209);
+  z-index: 99;
+}
+
 .main-header {
   position: relative;
   top: 3rem;
@@ -101,6 +109,11 @@ body {
   li {
     width: 100%;
   }
+}
+
+main {
+  position: relative;
+  top: 4.5rem;
 }
 
 .main-header input:checked ~ ul {

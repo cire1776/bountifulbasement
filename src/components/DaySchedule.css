@@ -9,7 +9,7 @@ article.calendar {
   display: grid;
   grid-template-columns: 350px 350px;
   grid-gap: 3rem;
-  padding: 6rem 3rem 3rem 3rem;
+  padding: 8rem 3rem 3rem 3rem;
   /* border: 1px solid lightgrey; */
 }
 
