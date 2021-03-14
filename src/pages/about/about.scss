@@ -25,3 +25,87 @@
     margin-bottom: 1rem;
   }
 }
+
+.blessed-trinity {
+  display: flex;
+
+  figure {
+    background-image: url("../../assets/blessedtrinity.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 140px;
+    width: 140px;
+  }
+
+  aside {
+    width: 75%;
+    margin-left: 1rem;
+  }
+}
+
+.hunger-network {
+  display: flex;
+
+  figure {
+    background-image: url("../../assets/HNGC-Logo-Color-Small1.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+    height: 140px;
+    width: 140px;
+  }
+  aside {
+    width: 75%;
+    margin-left: 1rem;
+  }
+}
+
+.food-bank {
+  display: flex;
+
+  figure {
+    background-image: url("../../assets/gcfb-logo.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+    height: 140px;
+    width: 140px;
+  }
+  aside {
+    width: 75%;
+    margin-left: 1rem;
+  }
+}
+
+.bpdc {
+  display: flex;
+
+  figure {
+    background-image: url("../../assets/bpdc.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 140px;
+    width: 140px;
+  }
+  aside {
+    width: 75%;
+    margin-left: 1rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .food-bank,
+  .hunger-network,
+  .bpdc,
+  .blessed-trinity {
+    flex-direction: column;
+    align-items: center;
+
+    figure {
+      margin-bottom: 1rem;
+      height: 40px;
+    }
+  }
+}
