@@ -61,7 +61,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 770px) {
   .difference {
     flex-direction: column;
     background-size: cover;
@@ -108,11 +108,19 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 675px) {
   .host-a-food-drive {
+    figure {
+      margin-left: 0rem;
+    }
+
     article {
       margin-right: 2rem;
+      padding-left: 0;
 
+      p {
+        margin-left: 2rem;
+      }
       svg {
         margin-bottom: 1rem;
       }
@@ -120,7 +128,7 @@
   }
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 675px) {
   .host-a-food-drive {
     flex-direction: column;
     justify-content: center;
@@ -192,7 +200,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 675px) {
   .give-money {
     article {
       // margin-top: -3.5rem;
@@ -201,7 +209,7 @@
   }
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 675px) {
   .give-money {
     flex-direction: column;
     justify-content: center;
@@ -237,6 +245,7 @@
   width: 100vw;
   min-height: 50vh;
   padding: 2rem 0 4rem 0;
+  margin-bottom: 2rem;
 
   article {
     padding-right: 2rem;
@@ -271,18 +280,25 @@
     text-align: center;
     font-size: 1.5rem;
     margin-top: 1rem;
-
-    &:hover {
+    s &:hover {
       color: limegreen;
       cursor: pointer;
     }
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 675px) {
   .volunteer {
+    figure {
+      margin-left: 0rem;
+    }
+
     article {
       margin-right: 2rem;
+
+      p {
+        margin-left: 2rem;
+      }
 
       svg {
         margin-bottom: 1rem;
@@ -291,7 +307,7 @@
   }
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 675px) {
   .volunteer {
     flex-direction: column;
     justify-content: center;
