@@ -193,6 +193,7 @@ function ResourceEditor({ data, location }) {
               <option value="Medical">Medical</option>
               <option value="Utilities">Utilities</option>
               <option value="Prayer">Prayer</option>
+              <option value="Rights">Tenant Rights</option>
             </select>
             <label htmlFor="featured">Featured</label>
             <input
