@@ -1,5 +1,5 @@
 .need-food {
-  margin-top: 3rem;
+  margin-top: 6rem;
 
   header {
     position: relative;
@@ -24,7 +24,10 @@
   }
 
   h1 {
+    text-align: center;
     font-size: 2rem;
+    word-wrap: break-word;
+    white-space: normal;
     color: black;
   }
 
