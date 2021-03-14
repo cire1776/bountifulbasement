@@ -43,12 +43,15 @@ function ResourceCard({
   editor,
   deleter,
 }) {
+  function isSelected(id) {
+    return selection !== undefined && selection === id;
+  }
   let classes = ["resource-card"];
   if (featured) {
     classes.push("featured");
   }
 
-  if (selection !== undefined && selection === id) {
+  if (isSelected(id)) {
     classes.push("selected");
   }
 
