@@ -34,7 +34,6 @@ function Index({ data, location }) {
     }
 
     setFilter([...filter]);
-    console.log(filter);
   }
 
   function isSelected(tag) {
@@ -137,7 +136,6 @@ function Index({ data, location }) {
         )}
         <ul>
           {featured_resources.map((resource) => {
-            console.log(resource);
             return (
               <li key={resource.id || resource.data.Name}>
                 <ResourceCard
