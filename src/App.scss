@@ -411,8 +411,12 @@ figure.logo {
     flex-direction: column;
 
     & > * {
-      margin-top: 1rem;
-      margin-bottom: 1rem;
+      margin: 1rem 0;
+      text-align: center;
+    }
+
+    article + article {
+      margin-left: 0;
     }
 
     nav {
