@@ -47,27 +47,27 @@ function NeedFood() {
               <p>
                 In order to minimize risk of exposure, we are taking the
                 following precautions:
-                <ul>
-                  <li>
-                    If you feel ill or are exhibiting COVID symptoms, please
-                    stay home.
-                  </li>
-                  <li>
-                    Our personnel cannot accept anything from your vehicle. Hold
-                    up your documentation for our registrar to verify.
-                  </li>
-                  <li>
-                    Access to the building is limited to volunteers only. Sorry,
-                    no restrooms are availble.
-                  </li>
-                  <li>If you are in a vehicle, please stay in your car.</li>
-                  <li>
-                    Mask wearing and social distancing are strictly enforced.
-                    Physical contact, including fist- or elbow-bumping, is not
-                    allowed.
-                  </li>
-                </ul>
               </p>
+              <ul>
+                <li>
+                  If you feel ill or are exhibiting COVID symptoms, please stay
+                  home.
+                </li>
+                <li>
+                  Our personnel cannot accept anything from your vehicle. Hold
+                  up your documentation for our registrar to verify.
+                </li>
+                <li>
+                  Access to the building is limited to volunteers only. Sorry,
+                  no restrooms are availble.
+                </li>
+                <li>If you are in a vehicle, please stay in your car.</li>
+                <li>
+                  Mask wearing and social distancing are strictly enforced.
+                  Physical contact, including fist- or elbow-bumping, is not
+                  allowed.
+                </li>
+              </ul>
             </article>
           </div>
           <div className="column">
