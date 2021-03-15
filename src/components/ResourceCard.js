@@ -62,7 +62,15 @@ function ResourceCard({
       {website !== "n/a" ? <a href={website}>Website</a> : "No Website"}
       <div className="icon-group">
         {tags.map((tag) => {
-          return <FontAwesomeIcon icon={ICONS[tag] || faQuestion} size="2x" />;
+          return (
+            <div key={tag}>
+              <FontAwesomeIcon
+                key={tag}
+                icon={ICONS[tag] || faQuestion}
+                size="2x"
+              />
+            </div>
+          );
         })}
       </div>
       {forEditor && (
