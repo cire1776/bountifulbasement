@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../../components/layout";
 import { Link } from "gatsby";
 import eligibility from "../../assets/eligibility-guidelines.pdf";
+import discrimination from "../../assets/JFAblue508.pdf";
 import "./need-food.scss";
 
 function NeedFood() {
@@ -29,6 +30,12 @@ function NeedFood() {
               <p>
                 You must also meet the federal income requirements defined{" "}
                 <a href={eligibility}>here</a>.
+                <p>
+                  {" "}
+                  All are <a href={discrimination}>welcome</a>. We do not
+                  discriminate on the basis of race, color, religion, national
+                  origin, sex, age or disability.
+                </p>
               </p>
             </article>
             <article>
