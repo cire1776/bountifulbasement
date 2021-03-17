@@ -90,8 +90,7 @@ function Difference() {
           <h1>Give Your Time</h1>
           <p>
             Our volunteers are the heart and soul of the Bountiful Basement.
-            Without them, not one bag of food would reach the families that need
-            it.{" "}
+            Without them, not one bag of food would reach our families in need
           </p>
           <h2>
             {" "}
