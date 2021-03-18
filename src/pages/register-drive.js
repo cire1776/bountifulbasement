@@ -9,7 +9,7 @@ function RegisterDrive() {
         I am please to host a drive benefitting the Bountiful Basement Food
         Pantry. I agree to abide by the Host A Drive Guidelines.
       </h1>
-      <form name="contact" method="POST" data-netlify="true">
+      <form name="register-drive" method="POST" data-netlify="true">
         <fieldset className="contact-info">
           <legend>Contact Infomation</legend>
           <label htmlFor="name">
