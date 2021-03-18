@@ -49,13 +49,17 @@ function Index() {
           <section className="bb-close">
             <figure></figure>
             <article>
+              <p>The Bountiful Basement works to keep this plate full.</p>
               <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. A
-                dolor quam optio mollitia maxime deleniti dolores, sunt dolorem,
-                vero officia ea pariatur id quaerat, delectus modi quo
-                assumenda? Omnis harum ipsam excepturi nobis ea accusamus nisi,
-                quasi rem, sint sequi, debitis aliquid maiores labore laboriosam
-                dicta quidem fuga. Ipsam, repudiandae?
+                In COVID-ravaged 2020, the Bountiful Basement served 3,383
+                families, a total of 10,493 Individuals. Because of COVID, we
+                increased our distribution size to a full seven days worth of
+                food instead of the previous three.
+              </p>
+              <p>
+                Last year, the Bountiful Basement served over 247,920 pounds
+                (almost 124 TONS!) of nutritious, appetizing food, including
+                produce, meat, canned goods and other non-perishable food.
               </p>
             </article>
           </section>
