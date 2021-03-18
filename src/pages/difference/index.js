@@ -65,6 +65,9 @@ function Difference() {
           <h2>
             <a href={foodDriveGuide}>Get the Guide</a>
           </h2>
+          <h2>
+            <Link to="/register-drive">Register a Drive</Link>
+          </h2>
         </article>
       </section>
       <CallToAction />
