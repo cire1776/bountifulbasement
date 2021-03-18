@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import Layout from "../../components/layout";
 import CallToAction from "../../components/CallToAction";
+import foodDriveGuide from "../../assets/food-drive-guide.pdf";
 import "./difference.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -61,6 +62,9 @@ function Difference() {
             organization or family and friends to help coordinate and collect
             items on a larger scale!
           </p>
+          <h2>
+            <a href={foodDriveGuide}>Get the Guide</a>
+          </h2>
         </article>
       </section>
       <CallToAction />
