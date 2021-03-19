@@ -10,7 +10,6 @@ const Layout = ({ classname, children, title }) => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>{title + " | Bountiful Basement"}</title>
-        <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
       <MainHeader />
       <main className={classname}>{children}</main>
