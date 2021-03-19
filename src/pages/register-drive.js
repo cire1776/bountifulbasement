@@ -6,10 +6,11 @@ function RegisterDrive() {
   return (
     <Layout classname="register-drive">
       <h1>
-        I am please to host a drive benefitting the Bountiful Basement Food
+        I am pleased to host a drive benefitting the Bountiful Basement Food
         Pantry. I agree to abide by the Host A Drive Guidelines.
       </h1>
       <form name="register-drive" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="register-drive" />
         <fieldset className="contact-info">
           <legend>Contact Infomation</legend>
           <label htmlFor="name">
