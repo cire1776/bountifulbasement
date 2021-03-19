@@ -17,6 +17,11 @@ function RegisterDrive() {
             Name: <input type="text" name="name" id="name" required />
           </label>
 
+          <label htmlFor="company">
+            Organization
+            <input type="text" name="company" id="company" />
+          </label>
+
           <label htmlFor="address">
             Address
             <input type="text" name="address" id="address" required />
