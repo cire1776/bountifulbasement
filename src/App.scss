@@ -121,6 +121,16 @@ main {
   left: 0;
 }
 
+.main-header input:checked ~ .screen {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 .main-header ul li:last-child {
   padding: 0.75em 0;
 }
@@ -460,6 +470,10 @@ figure.logo {
   }
 
   .main-header {
+    .screen {
+      display: none;
+    }
+
     nav ul {
       position: relative;
       top: 0;
