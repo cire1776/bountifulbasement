@@ -66,6 +66,11 @@ function RegisterDrive() {
             <input type="text" name="delivery-date" id="delivery-date" />
           </label>
         </fieldset>
+        <h1>
+          Please schedule a time to drop off your donations during our drop off
+          times:
+        </h1>
+        <p>Monday: 10AM-1PM, Tuesday: 9:AM-11:30AM, Wednesday: 4PM-6:45PM</p>
         <button type="submit">Register</button>
       </form>
     </Layout>
