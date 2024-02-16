@@ -34,7 +34,7 @@
     "gatsby-transformer-sharp": "^2.12.0",
     "netlify-cms-app": "^2.14.26",
     "netlify-identity-widget": "^1.9.1",
-    "node-sass": "^5.0.0",
+    "node-sass": "^9.0.0",
     "react": "^17.0.1",
     "react-calendar": "^3.3.1",
     "react-dom": "^17.0.1",
