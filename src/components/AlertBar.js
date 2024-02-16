@@ -3,7 +3,7 @@ const Airtable = require("airtable-node");
 
 async function fetchAlertMessages(cb) {
   const airtable = await new Airtable({
-    apiKey: process.env.GATSBY_AIRTABLE_API_KEY,
+    apiKey: process.env.AIRTABLE_PAT,
   })
     .base("appPJGWfywLNUoPkg")
     .table("alert-messages");
