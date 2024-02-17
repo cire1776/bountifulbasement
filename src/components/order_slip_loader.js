@@ -2,7 +2,7 @@ const Airtable = require("airtable-node");
 
 export async function fetchSlipItems(itemSetter) {
   const airtable = await new Airtable({
-    apiKey: process.env.GATSBY_AIRTABLE_PAT,
+    apiKey: process.env.GATSBY_AIRTABLE_API_KEY,
   })
     .base("appPJGWfywLNUoPkg")
     .table("order-slip-data");
