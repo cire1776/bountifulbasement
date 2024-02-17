@@ -8,7 +8,7 @@ import "./community.scss";
 
 async function fetchResources(refresher) {
   const airtable = await new Airtable({
-    apiKey: process.env.AIRTABLE_PAT,
+    apiKey: process.env.GATSBY_AIRTABLE_API_KEY,
   })
     .base("appN5n5h3z6FsZU59")
     .table("resources");
@@ -21,7 +21,7 @@ async function fetchResources(refresher) {
 
 async function deleteResource(id, refresher) {
   const airtable = await new Airtable({
-    apiKey: process.env.AIRTABLE_PAT,
+    apiKey: process.env.GATSBY_AIRTABLE_API_KEY,
   })
     .base("appN5n5h3z6FsZU59")
     .table("resources");
@@ -34,7 +34,7 @@ async function deleteResource(id, refresher) {
 
 async function createResource(fields, refresher) {
   const airtable = await new Airtable({
-    apiKey: process.env.AIRTABLE_PAT,
+    apiKey: process.env.GATSBY_AIRTABLE_API_KEY,
   })
     .base("appN5n5h3z6FsZU59")
     .table("resources");
@@ -47,7 +47,7 @@ async function createResource(fields, refresher) {
 
 async function updateResource(id, fields, refresher) {
   const airtable = await new Airtable({
-    apiKey: process.env.AIRTABLE_PAT,
+    apiKey: process.env.GATSBY_AIRTABLE_API_KEY,
   })
     .base("appN5n5h3z6FsZU59")
     .table("resources");

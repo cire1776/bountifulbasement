@@ -4,7 +4,7 @@ const Airtable = require("airtable-node");
 
 const baseID = "appPJGWfywLNUoPkg";
 
-const airtable = new Airtable({ apiKey: process.env.AIRTABLE_PAT })
+const airtable = new Airtable({ apiKey: process.env.GATSBY_AIRTABLE_API_KEY })
   .base(baseID)
   .table("events");
 
