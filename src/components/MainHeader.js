@@ -50,7 +50,7 @@ function MainHeader() {
           <nav>
             <label htmlFor="hamburger">&#9776;</label>
             <input type="checkbox" id="hamburger" ref={checkbox} />
-            <div className="screen" onClick={closeNavBar}></div>
+
             <ul>
               <li>
                 <Link to="/about">About Us</Link>
